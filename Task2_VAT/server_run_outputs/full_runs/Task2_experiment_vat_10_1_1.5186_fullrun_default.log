@@ -1,0 +1,71 @@
+000 (5186.000.000) 2022-03-02 01:06:22 Job submitted from host: <134.96.227.101:9618?addrs=134.96.227.101-9618&alias=conduit2.cs.uni-saarland.de&noUDP&sock=schedd_1282_ec81>
+...
+040 (5186.000.000) 2022-03-02 01:06:23 Started transferring input files
+	Transferring to host: <134.96.224.199:9618?addrs=134.96.224.199-9618&alias=tenos.cs.uni-saarland.de&noUDP&sock=teaching2_3130_1e38_1648387>
+...
+040 (5186.000.000) 2022-03-02 01:06:23 Finished transferring input files
+...
+001 (5186.000.000) 2022-03-02 01:06:23 Job executing on host: <134.96.224.199:9618?addrs=134.96.224.199-9618&alias=tenos.cs.uni-saarland.de&noUDP&sock=startd_1941_f16a>
+...
+006 (5186.000.000) 2022-03-02 01:06:32 Image size of job updated: 95
+	95  -  MemoryUsage of job (MB)
+	97700  -  ResidentSetSize of job (KB)
+...
+006 (5186.000.000) 2022-03-02 01:11:33 Image size of job updated: 6460
+	6460  -  MemoryUsage of job (MB)
+	6615864  -  ResidentSetSize of job (KB)
+...
+006 (5186.000.000) 2022-03-02 01:41:37 Image size of job updated: 6544
+	6544  -  MemoryUsage of job (MB)
+	6701240  -  ResidentSetSize of job (KB)
+...
+006 (5186.000.000) 2022-03-02 01:51:38 Image size of job updated: 6710
+	6710  -  MemoryUsage of job (MB)
+	6871448  -  ResidentSetSize of job (KB)
+...
+006 (5186.000.000) 2022-03-02 02:01:39 Image size of job updated: 6894
+	6894  -  MemoryUsage of job (MB)
+	7060252  -  ResidentSetSize of job (KB)
+...
+006 (5186.000.000) 2022-03-02 03:56:52 Image size of job updated: 6927
+	6927  -  MemoryUsage of job (MB)
+	7093444  -  ResidentSetSize of job (KB)
+...
+006 (5186.000.000) 2022-03-02 04:06:53 Image size of job updated: 7028
+	7028  -  MemoryUsage of job (MB)
+	7197220  -  ResidentSetSize of job (KB)
+...
+006 (5186.000.000) 2022-03-05 07:09:29 Image size of job updated: 7184
+	7184  -  MemoryUsage of job (MB)
+	7356824  -  ResidentSetSize of job (KB)
+...
+006 (5186.000.000) 2022-03-05 07:39:33 Image size of job updated: 7280
+	7280  -  MemoryUsage of job (MB)
+	7455100  -  ResidentSetSize of job (KB)
+...
+006 (5186.000.000) 2022-03-05 08:19:36 Image size of job updated: 7366
+	7366  -  MemoryUsage of job (MB)
+	7542980  -  ResidentSetSize of job (KB)
+...
+040 (5186.000.000) 2022-03-05 09:50:45 Started transferring output files
+...
+040 (5186.000.000) 2022-03-05 09:50:47 Finished transferring output files
+...
+005 (5186.000.000) 2022-03-05 09:50:47 Job terminated.
+	(1) Normal termination (return value 1)
+		Usr 18 05:57:52, Sys 6 15:43:32  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 18 05:57:52, Sys 6 15:43:32  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	87057936  -  Run Bytes Sent By Job
+	32668  -  Run Bytes Received By Job
+	87057936  -  Total Bytes Sent By Job
+	32668  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage   Request Allocated Assigned
+	   Cpus                 :      0.00         1         7 
+	   Disk (KB)            : 873167    268435456 441185228 
+	   Gpus (Average)       :                   1         1 "GPU-87019d2b"
+	   Memory (MB)          :   7366        65536     96741 
+
+	Job terminated of its own accord at 2022-03-05T08:50:45Z with exit-code 1.
+...

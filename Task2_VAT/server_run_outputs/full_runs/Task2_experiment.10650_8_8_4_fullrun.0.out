@@ -1,0 +1,1482 @@
+Thu Mar  3 23:01:34 2022       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 460.106.00   Driver Version: 460.106.00   CUDA Version: 11.2     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Tesla P100-SXM2...  On   | 00000000:04:00.0 Off |                    0 |
+| N/A   40C    P0    51W / 300W |   6217MiB / 16280MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla P100-SXM2...  On   | 00000000:05:00.0 Off |                    0 |
+| N/A   35C    P0    51W / 300W |   3431MiB / 16280MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   2  Tesla P100-SXM2...  On   | 00000000:09:00.0 Off |                    0 |
+| N/A   31C    P0    30W / 300W |      6MiB / 16280MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   3  Tesla P100-SXM2...  On   | 00000000:0A:00.0 Off |                    0 |
+| N/A   32C    P0    32W / 300W |      6MiB / 16280MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   4  Tesla P100-SXM2...  On   | 00000000:85:00.0 Off |                    0 |
+| N/A   31C    P0    32W / 300W |      6MiB / 16280MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   5  Tesla P100-SXM2...  On   | 00000000:86:00.0 Off |                    0 |
+| N/A   31C    P0    31W / 300W |      6MiB / 16280MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   6  Tesla P100-SXM2...  On   | 00000000:89:00.0 Off |                    0 |
+| N/A   29C    P0    32W / 300W |      6MiB / 16280MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   7  Tesla P100-SXM2...  On   | 00000000:8A:00.0 Off |                    0 |
+| N/A   32C    P0    32W / 300W |      6MiB / 16280MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
++-----------------------------------------------------------------------------+
+>>> using 56 workers
+Downloading https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz to ./data/cifar-10-python.tar.gz
+Extracting ./data/cifar-10-python.tar.gz to ./data/
+Namespace(alpha=1.0, beta1=0.9, beta2=0.999, datapath='./data/', dataset='cifar10', epochs=300, expand_labels=False, factor=0.5, log_dir='./runs', lr=0.03, min_lr=1e-07, model_depth=28, model_dir='./saved_models', model_width=2, momentum=0.9, multiplier=3, num_classes=10, num_labeled=4000, num_workers=56, patience=10, test_batch=1024, threshold=0.95, train_batch=1024, vat_eps=8.0, vat_iter=4, vat_xi=8.0, wandb=False, warmup_epochs=35, wd=5e-05)
+>>> Warmup Training
+>>> Epoch 1 Train Avg Loss: 2.450, Train Accuracy: 10.690
+>>> Epoch 1 Test Avg Loss: 38429489561.600, Test Accuracy: 9.969, learning rate: 0.03
+>>> Epoch 2 Train Avg Loss: 2.335, Train Accuracy: 10.440
+>>> Epoch 2 Test Avg Loss: 1287911.188, Test Accuracy: 10.026, learning rate: 0.03
+>>> Epoch 3 Train Avg Loss: 2.301, Train Accuracy: 11.593
+>>> Epoch 3 Test Avg Loss: 12201.029, Test Accuracy: 9.999, learning rate: 0.03
+>>> Epoch 4 Train Avg Loss: 2.289, Train Accuracy: 12.461
+>>> Epoch 4 Test Avg Loss: 547.791, Test Accuracy: 9.982, learning rate: 0.03
+>>> Epoch 5 Train Avg Loss: 2.261, Train Accuracy: 13.822
+>>> Epoch 5 Test Avg Loss: 74.743, Test Accuracy: 10.353, learning rate: 0.03
+>>> Epoch 6 Train Avg Loss: 2.151, Train Accuracy: 17.134
+>>> Epoch 6 Test Avg Loss: 29.649, Test Accuracy: 10.843, learning rate: 0.03
+>>> Epoch 7 Train Avg Loss: 2.076, Train Accuracy: 20.272
+>>> Epoch 7 Test Avg Loss: 14.881, Test Accuracy: 13.319, learning rate: 0.03
+>>> Epoch 8 Train Avg Loss: 2.033, Train Accuracy: 20.697
+>>> Epoch 8 Test Avg Loss: 12.575, Test Accuracy: 14.722, learning rate: 0.03
+>>> Epoch 9 Train Avg Loss: 1.985, Train Accuracy: 22.639
+>>> Epoch 9 Test Avg Loss: 3.143, Test Accuracy: 17.716, learning rate: 0.03
+>>> Epoch 10 Train Avg Loss: 1.950, Train Accuracy: 23.842
+>>> Epoch 10 Test Avg Loss: 2.577, Test Accuracy: 19.505, learning rate: 0.03
+>>> Epoch 11 Train Avg Loss: 1.926, Train Accuracy: 24.685
+>>> Epoch 11 Test Avg Loss: 3.291, Test Accuracy: 17.501, learning rate: 0.03
+>>> Epoch 12 Train Avg Loss: 1.910, Train Accuracy: 25.450
+>>> Epoch 12 Test Avg Loss: 2.126, Test Accuracy: 23.443, learning rate: 0.03
+>>> Epoch 13 Train Avg Loss: 1.882, Train Accuracy: 26.892
+>>> Epoch 13 Test Avg Loss: 2.005, Test Accuracy: 25.612, learning rate: 0.03
+>>> Epoch 14 Train Avg Loss: 1.865, Train Accuracy: 26.744
+>>> Epoch 14 Test Avg Loss: 1.956, Test Accuracy: 27.042, learning rate: 0.03
+>>> Epoch 15 Train Avg Loss: 1.841, Train Accuracy: 28.073
+>>> Epoch 15 Test Avg Loss: 1.958, Test Accuracy: 28.324, learning rate: 0.03
+>>> Epoch 16 Train Avg Loss: 1.829, Train Accuracy: 29.382
+>>> Epoch 16 Test Avg Loss: 1.838, Test Accuracy: 29.066, learning rate: 0.03
+>>> Epoch 17 Train Avg Loss: 1.784, Train Accuracy: 30.881
+>>> Epoch 17 Test Avg Loss: 1.882, Test Accuracy: 29.006, learning rate: 0.03
+>>> Epoch 18 Train Avg Loss: 1.750, Train Accuracy: 32.125
+>>> Epoch 18 Test Avg Loss: 1.864, Test Accuracy: 30.677, learning rate: 0.03
+>>> Epoch 19 Train Avg Loss: 1.714, Train Accuracy: 33.313
+>>> Epoch 19 Test Avg Loss: 1.836, Test Accuracy: 31.020, learning rate: 0.03
+>>> Epoch 20 Train Avg Loss: 1.707, Train Accuracy: 35.626
+>>> Epoch 20 Test Avg Loss: 1.983, Test Accuracy: 28.074, learning rate: 0.03
+>>> Epoch 21 Train Avg Loss: 1.678, Train Accuracy: 36.722
+>>> Epoch 21 Test Avg Loss: 1.821, Test Accuracy: 30.320, learning rate: 0.03
+>>> Epoch 22 Train Avg Loss: 1.672, Train Accuracy: 36.857
+>>> Epoch 22 Test Avg Loss: 1.768, Test Accuracy: 31.144, learning rate: 0.03
+>>> Epoch 23 Train Avg Loss: 1.653, Train Accuracy: 36.200
+>>> Epoch 23 Test Avg Loss: 1.822, Test Accuracy: 33.128, learning rate: 0.03
+>>> Epoch 24 Train Avg Loss: 1.607, Train Accuracy: 38.924
+>>> Epoch 24 Test Avg Loss: 1.748, Test Accuracy: 36.805, learning rate: 0.03
+>>> Epoch 25 Train Avg Loss: 1.585, Train Accuracy: 39.675
+>>> Epoch 25 Test Avg Loss: 1.705, Test Accuracy: 36.965, learning rate: 0.03
+>>> Epoch 26 Train Avg Loss: 1.561, Train Accuracy: 40.793
+>>> Epoch 26 Test Avg Loss: 1.703, Test Accuracy: 36.514, learning rate: 0.03
+>>> Epoch 27 Train Avg Loss: 1.545, Train Accuracy: 42.784
+>>> Epoch 27 Test Avg Loss: 1.683, Test Accuracy: 40.031, learning rate: 0.03
+>>> Epoch 28 Train Avg Loss: 1.535, Train Accuracy: 42.452
+>>> Epoch 28 Test Avg Loss: 1.793, Test Accuracy: 35.717, learning rate: 0.03
+>>> Epoch 29 Train Avg Loss: 1.522, Train Accuracy: 42.859
+>>> Epoch 29 Test Avg Loss: 1.783, Test Accuracy: 37.941, learning rate: 0.03
+>>> Epoch 30 Train Avg Loss: 1.502, Train Accuracy: 42.681
+>>> Epoch 30 Test Avg Loss: 1.520, Test Accuracy: 43.996, learning rate: 0.03
+>>> Epoch 31 Train Avg Loss: 1.471, Train Accuracy: 45.097
+>>> Epoch 31 Test Avg Loss: 1.775, Test Accuracy: 37.752, learning rate: 0.03
+>>> Epoch 32 Train Avg Loss: 1.471, Train Accuracy: 45.179
+>>> Epoch 32 Test Avg Loss: 1.599, Test Accuracy: 41.759, learning rate: 0.03
+>>> Epoch 33 Train Avg Loss: 1.454, Train Accuracy: 45.313
+>>> Epoch 33 Test Avg Loss: 1.599, Test Accuracy: 42.915, learning rate: 0.03
+>>> Epoch 34 Train Avg Loss: 1.436, Train Accuracy: 46.213
+>>> Epoch 34 Test Avg Loss: 1.627, Test Accuracy: 42.529, learning rate: 0.03
+>>> Epoch 35 Train Avg Loss: 1.401, Train Accuracy: 48.011
+>>> Epoch 35 Test Avg Loss: 1.524, Test Accuracy: 44.744, learning rate: 0.03
+>>> Loading Best Model-val_loss: 1.520
+Model loaded from epoch 30
+>>> VAT Training
+>>> Epoch 36 Test Avg Loss: 2.249, Test Accuracy: 12.511, learning rate: 0.03
+>>> Epoch 37 Test Avg Loss: 2.069, Test Accuracy: 21.043, learning rate: 0.03
+>>> Epoch 38 Test Avg Loss: 2.539, Test Accuracy: 10.005, learning rate: 0.03
+>>> Epoch 39 Test Avg Loss: 2.216, Test Accuracy: 21.380, learning rate: 0.03
+>>> Epoch 40 Test Avg Loss: 2.124, Test Accuracy: 24.446, learning rate: 0.03
+>>> Epoch 41 Test Avg Loss: 2.031, Test Accuracy: 25.285, learning rate: 0.03
+Epoch    41: reducing learning rate of group 0 to 1.5000e-02.
+>>> Epoch 42 Test Avg Loss: 1.818, Test Accuracy: 37.065, learning rate: 0.015
+>>> Epoch 43 Test Avg Loss: 1.739, Test Accuracy: 38.189, learning rate: 0.015
+>>> Epoch 44 Test Avg Loss: 1.773, Test Accuracy: 37.930, learning rate: 0.015
+>>> Epoch 45 Test Avg Loss: 1.841, Test Accuracy: 37.055, learning rate: 0.015
+>>> Epoch 46 Test Avg Loss: 1.850, Test Accuracy: 37.095, learning rate: 0.015
+>>> Epoch 47 Test Avg Loss: 1.778, Test Accuracy: 39.706, learning rate: 0.015
+>>> Epoch 48 Test Avg Loss: 1.800, Test Accuracy: 35.386, learning rate: 0.015
+>>> Epoch 49 Test Avg Loss: 1.855, Test Accuracy: 32.480, learning rate: 0.015
+>>> Epoch 50 Test Avg Loss: 1.868, Test Accuracy: 36.219, learning rate: 0.015
+>>> Epoch 51 Test Avg Loss: 1.732, Test Accuracy: 41.212, learning rate: 0.015
+>>> Epoch 52 Test Avg Loss: 1.729, Test Accuracy: 39.346, learning rate: 0.015
+>>> Epoch 53 Test Avg Loss: 1.772, Test Accuracy: 39.206, learning rate: 0.015
+>>> Epoch 54 Test Avg Loss: 1.697, Test Accuracy: 41.842, learning rate: 0.015
+>>> Epoch 55 Test Avg Loss: 1.890, Test Accuracy: 34.132, learning rate: 0.015
+>>> Epoch 56 Test Avg Loss: 1.750, Test Accuracy: 42.155, learning rate: 0.015
+Epoch    56: reducing learning rate of group 0 to 7.5000e-03.
+>>> Epoch 57 Test Avg Loss: 1.659, Test Accuracy: 43.359, learning rate: 0.0075
+>>> Epoch 58 Test Avg Loss: 1.661, Test Accuracy: 43.157, learning rate: 0.0075
+>>> Epoch 59 Test Avg Loss: 1.621, Test Accuracy: 43.924, learning rate: 0.0075
+>>> Epoch 60 Test Avg Loss: 1.602, Test Accuracy: 43.480, learning rate: 0.0075
+>>> Epoch 61 Test Avg Loss: 1.604, Test Accuracy: 43.577, learning rate: 0.0075
+>>> Epoch 62 Test Avg Loss: 1.673, Test Accuracy: 43.467, learning rate: 0.0075
+>>> Epoch 63 Test Avg Loss: 1.651, Test Accuracy: 42.729, learning rate: 0.0075
+>>> Epoch 64 Test Avg Loss: 1.611, Test Accuracy: 44.192, learning rate: 0.0075
+>>> Epoch 65 Test Avg Loss: 1.575, Test Accuracy: 45.005, learning rate: 0.0075
+>>> Epoch 66 Test Avg Loss: 1.627, Test Accuracy: 42.372, learning rate: 0.0075
+>>> Epoch 67 Test Avg Loss: 1.640, Test Accuracy: 43.036, learning rate: 0.0075
+>>> Epoch 68 Test Avg Loss: 1.631, Test Accuracy: 42.694, learning rate: 0.0075
+>>> Epoch 69 Test Avg Loss: 1.652, Test Accuracy: 40.976, learning rate: 0.0075
+>>> Epoch 70 Test Avg Loss: 1.595, Test Accuracy: 44.395, learning rate: 0.0075
+>>> Epoch 71 Test Avg Loss: 1.589, Test Accuracy: 44.382, learning rate: 0.0075
+Epoch    71: reducing learning rate of group 0 to 3.7500e-03.
+>>> Epoch 72 Test Avg Loss: 1.550, Test Accuracy: 45.751, learning rate: 0.00375
+>>> Epoch 73 Test Avg Loss: 1.542, Test Accuracy: 45.902, learning rate: 0.00375
+>>> Epoch 74 Test Avg Loss: 1.578, Test Accuracy: 44.860, learning rate: 0.00375
+>>> Epoch 75 Test Avg Loss: 1.490, Test Accuracy: 46.598, learning rate: 0.00375
+>>> Epoch 76 Test Avg Loss: 1.589, Test Accuracy: 45.285, learning rate: 0.00375
+>>> Epoch 77 Test Avg Loss: 1.517, Test Accuracy: 46.645, learning rate: 0.00375
+>>> Epoch 78 Test Avg Loss: 1.568, Test Accuracy: 45.089, learning rate: 0.00375
+>>> Epoch 79 Test Avg Loss: 1.592, Test Accuracy: 43.621, learning rate: 0.00375
+>>> Epoch 80 Test Avg Loss: 1.528, Test Accuracy: 46.109, learning rate: 0.00375
+>>> Epoch 81 Test Avg Loss: 1.536, Test Accuracy: 45.992, learning rate: 0.00375
+>>> Epoch 82 Test Avg Loss: 1.533, Test Accuracy: 46.058, learning rate: 0.00375
+>>> Epoch 83 Test Avg Loss: 1.530, Test Accuracy: 45.823, learning rate: 0.00375
+>>> Epoch 84 Test Avg Loss: 1.547, Test Accuracy: 45.632, learning rate: 0.00375
+>>> Epoch 85 Test Avg Loss: 1.495, Test Accuracy: 47.145, learning rate: 0.00375
+>>> Epoch 86 Test Avg Loss: 1.579, Test Accuracy: 45.018, learning rate: 0.00375
+Epoch    86: reducing learning rate of group 0 to 1.8750e-03.
+>>> Epoch 87 Test Avg Loss: 1.470, Test Accuracy: 48.398, learning rate: 0.001875
+>>> Epoch 88 Test Avg Loss: 1.502, Test Accuracy: 47.638, learning rate: 0.001875
+>>> Epoch 89 Test Avg Loss: 1.474, Test Accuracy: 49.149, learning rate: 0.001875
+>>> Epoch 90 Test Avg Loss: 1.491, Test Accuracy: 47.882, learning rate: 0.001875
+>>> Epoch 91 Test Avg Loss: 1.435, Test Accuracy: 49.688, learning rate: 0.001875
+>>> Epoch 92 Test Avg Loss: 1.462, Test Accuracy: 48.591, learning rate: 0.001875
+>>> Epoch 93 Test Avg Loss: 1.443, Test Accuracy: 49.738, learning rate: 0.001875
+>>> Epoch 94 Test Avg Loss: 1.471, Test Accuracy: 48.505, learning rate: 0.001875
+>>> Epoch 95 Test Avg Loss: 1.463, Test Accuracy: 49.018, learning rate: 0.001875
+>>> Epoch 96 Test Avg Loss: 1.443, Test Accuracy: 49.669, learning rate: 0.001875
+>>> Epoch 97 Test Avg Loss: 1.448, Test Accuracy: 49.847, learning rate: 0.001875
+>>> Epoch 98 Test Avg Loss: 1.469, Test Accuracy: 48.490, learning rate: 0.001875
+>>> Epoch 99 Test Avg Loss: 1.425, Test Accuracy: 49.897, learning rate: 0.001875
+>>> Epoch 100 Test Avg Loss: 1.463, Test Accuracy: 48.756, learning rate: 0.001875
+>>> Epoch 101 Test Avg Loss: 1.456, Test Accuracy: 49.163, learning rate: 0.001875
+>>> Epoch 102 Test Avg Loss: 1.470, Test Accuracy: 48.568, learning rate: 0.001875
+>>> Epoch 103 Test Avg Loss: 1.437, Test Accuracy: 49.761, learning rate: 0.001875
+>>> Epoch 104 Test Avg Loss: 1.432, Test Accuracy: 50.024, learning rate: 0.001875
+>>> Epoch 105 Test Avg Loss: 1.465, Test Accuracy: 48.149, learning rate: 0.001875
+>>> Epoch 106 Test Avg Loss: 1.465, Test Accuracy: 48.693, learning rate: 0.001875
+>>> Epoch 107 Test Avg Loss: 1.440, Test Accuracy: 49.260, learning rate: 0.001875
+>>> Epoch 108 Test Avg Loss: 1.458, Test Accuracy: 48.730, learning rate: 0.001875
+>>> Epoch 109 Test Avg Loss: 1.461, Test Accuracy: 48.885, learning rate: 0.001875
+>>> Epoch 110 Test Avg Loss: 1.450, Test Accuracy: 49.157, learning rate: 0.001875
+Epoch   110: reducing learning rate of group 0 to 9.3750e-04.
+>>> Epoch 111 Test Avg Loss: 1.426, Test Accuracy: 49.960, learning rate: 0.0009375
+>>> Epoch 112 Test Avg Loss: 1.455, Test Accuracy: 49.045, learning rate: 0.0009375
+>>> Epoch 113 Test Avg Loss: 1.442, Test Accuracy: 49.623, learning rate: 0.0009375
+>>> Epoch 114 Test Avg Loss: 1.446, Test Accuracy: 49.394, learning rate: 0.0009375
+>>> Epoch 115 Test Avg Loss: 1.446, Test Accuracy: 49.637, learning rate: 0.0009375
+>>> Epoch 116 Test Avg Loss: 1.441, Test Accuracy: 49.576, learning rate: 0.0009375
+>>> Epoch 117 Test Avg Loss: 1.449, Test Accuracy: 49.450, learning rate: 0.0009375
+>>> Epoch 118 Test Avg Loss: 1.447, Test Accuracy: 48.695, learning rate: 0.0009375
+>>> Epoch 119 Test Avg Loss: 1.433, Test Accuracy: 50.011, learning rate: 0.0009375
+>>> Epoch 120 Test Avg Loss: 1.425, Test Accuracy: 49.784, learning rate: 0.0009375
+>>> Epoch 121 Test Avg Loss: 1.438, Test Accuracy: 49.290, learning rate: 0.0009375
+>>> Epoch 122 Test Avg Loss: 1.443, Test Accuracy: 49.659, learning rate: 0.0009375
+>>> Epoch 123 Test Avg Loss: 1.451, Test Accuracy: 49.115, learning rate: 0.0009375
+>>> Epoch 124 Test Avg Loss: 1.429, Test Accuracy: 50.376, learning rate: 0.0009375
+>>> Epoch 125 Test Avg Loss: 1.429, Test Accuracy: 50.015, learning rate: 0.0009375
+Epoch   125: reducing learning rate of group 0 to 4.6875e-04.
+>>> Epoch 126 Test Avg Loss: 1.420, Test Accuracy: 50.599, learning rate: 0.00046875
+>>> Epoch 127 Test Avg Loss: 1.416, Test Accuracy: 50.829, learning rate: 0.00046875
+>>> Epoch 128 Test Avg Loss: 1.450, Test Accuracy: 49.018, learning rate: 0.00046875
+>>> Epoch 129 Test Avg Loss: 1.434, Test Accuracy: 49.870, learning rate: 0.00046875
+>>> Epoch 130 Test Avg Loss: 1.417, Test Accuracy: 50.313, learning rate: 0.00046875
+>>> Epoch 131 Test Avg Loss: 1.420, Test Accuracy: 50.699, learning rate: 0.00046875
+>>> Epoch 132 Test Avg Loss: 1.414, Test Accuracy: 50.412, learning rate: 0.00046875
+>>> Epoch 133 Test Avg Loss: 1.419, Test Accuracy: 50.307, learning rate: 0.00046875
+>>> Epoch 134 Test Avg Loss: 1.428, Test Accuracy: 50.220, learning rate: 0.00046875
+>>> Epoch 135 Test Avg Loss: 1.415, Test Accuracy: 50.784, learning rate: 0.00046875
+>>> Epoch 136 Test Avg Loss: 1.428, Test Accuracy: 49.811, learning rate: 0.00046875
+>>> Epoch 137 Test Avg Loss: 1.419, Test Accuracy: 50.666, learning rate: 0.00046875
+>>> Epoch 138 Test Avg Loss: 1.439, Test Accuracy: 49.489, learning rate: 0.00046875
+>>> Epoch 139 Test Avg Loss: 1.424, Test Accuracy: 49.949, learning rate: 0.00046875
+>>> Epoch 140 Test Avg Loss: 1.427, Test Accuracy: 50.098, learning rate: 0.00046875
+>>> Epoch 141 Test Avg Loss: 1.409, Test Accuracy: 50.700, learning rate: 0.00046875
+>>> Epoch 142 Test Avg Loss: 1.418, Test Accuracy: 49.952, learning rate: 0.00046875
+>>> Epoch 143 Test Avg Loss: 1.433, Test Accuracy: 49.785, learning rate: 0.00046875
+>>> Epoch 144 Test Avg Loss: 1.437, Test Accuracy: 49.382, learning rate: 0.00046875
+>>> Epoch 145 Test Avg Loss: 1.427, Test Accuracy: 50.244, learning rate: 0.00046875
+>>> Epoch 146 Test Avg Loss: 1.415, Test Accuracy: 50.962, learning rate: 0.00046875
+>>> Epoch 147 Test Avg Loss: 1.419, Test Accuracy: 50.476, learning rate: 0.00046875
+>>> Epoch 148 Test Avg Loss: 1.412, Test Accuracy: 50.886, learning rate: 0.00046875
+>>> Epoch 149 Test Avg Loss: 1.430, Test Accuracy: 50.307, learning rate: 0.00046875
+>>> Epoch 150 Test Avg Loss: 1.425, Test Accuracy: 50.495, learning rate: 0.00046875
+>>> Epoch 151 Test Avg Loss: 1.409, Test Accuracy: 51.080, learning rate: 0.00046875
+>>> Epoch 152 Test Avg Loss: 1.431, Test Accuracy: 50.294, learning rate: 0.00046875
+Epoch   152: reducing learning rate of group 0 to 2.3437e-04.
+>>> Epoch 153 Test Avg Loss: 1.414, Test Accuracy: 50.618, learning rate: 0.000234375
+>>> Epoch 154 Test Avg Loss: 1.395, Test Accuracy: 51.517, learning rate: 0.000234375
+>>> Epoch 155 Test Avg Loss: 1.408, Test Accuracy: 51.106, learning rate: 0.000234375
+>>> Epoch 156 Test Avg Loss: 1.399, Test Accuracy: 51.381, learning rate: 0.000234375
+>>> Epoch 157 Test Avg Loss: 1.410, Test Accuracy: 51.077, learning rate: 0.000234375
+>>> Epoch 158 Test Avg Loss: 1.407, Test Accuracy: 51.310, learning rate: 0.000234375
+>>> Epoch 159 Test Avg Loss: 1.391, Test Accuracy: 51.611, learning rate: 0.000234375
+>>> Epoch 160 Test Avg Loss: 1.400, Test Accuracy: 51.394, learning rate: 0.000234375
+>>> Epoch 161 Test Avg Loss: 1.404, Test Accuracy: 51.293, learning rate: 0.000234375
+>>> Epoch 162 Test Avg Loss: 1.416, Test Accuracy: 50.830, learning rate: 0.000234375
+>>> Epoch 163 Test Avg Loss: 1.409, Test Accuracy: 50.711, learning rate: 0.000234375
+>>> Epoch 164 Test Avg Loss: 1.404, Test Accuracy: 51.087, learning rate: 0.000234375
+>>> Epoch 165 Test Avg Loss: 1.406, Test Accuracy: 51.009, learning rate: 0.000234375
+>>> Epoch 166 Test Avg Loss: 1.388, Test Accuracy: 51.701, learning rate: 0.000234375
+>>> Epoch 167 Test Avg Loss: 1.391, Test Accuracy: 51.424, learning rate: 0.000234375
+>>> Epoch 168 Test Avg Loss: 1.396, Test Accuracy: 51.394, learning rate: 0.000234375
+>>> Epoch 169 Test Avg Loss: 1.411, Test Accuracy: 50.793, learning rate: 0.000234375
+>>> Epoch 170 Test Avg Loss: 1.396, Test Accuracy: 51.527, learning rate: 0.000234375
+>>> Epoch 171 Test Avg Loss: 1.404, Test Accuracy: 50.926, learning rate: 0.000234375
+>>> Epoch 172 Test Avg Loss: 1.398, Test Accuracy: 51.186, learning rate: 0.000234375
+>>> Epoch 173 Test Avg Loss: 1.406, Test Accuracy: 51.112, learning rate: 0.000234375
+>>> Epoch 174 Test Avg Loss: 1.393, Test Accuracy: 51.402, learning rate: 0.000234375
+>>> Epoch 175 Test Avg Loss: 1.390, Test Accuracy: 51.180, learning rate: 0.000234375
+>>> Epoch 176 Test Avg Loss: 1.400, Test Accuracy: 51.187, learning rate: 0.000234375
+>>> Epoch 177 Test Avg Loss: 1.394, Test Accuracy: 51.229, learning rate: 0.000234375
+Epoch   177: reducing learning rate of group 0 to 1.1719e-04.
+>>> Epoch 178 Test Avg Loss: 1.373, Test Accuracy: 51.577, learning rate: 0.0001171875
+>>> Epoch 179 Test Avg Loss: 1.376, Test Accuracy: 51.453, learning rate: 0.0001171875
+>>> Epoch 180 Test Avg Loss: 1.374, Test Accuracy: 51.803, learning rate: 0.0001171875
+>>> Epoch 181 Test Avg Loss: 1.384, Test Accuracy: 51.249, learning rate: 0.0001171875
+>>> Epoch 182 Test Avg Loss: 1.372, Test Accuracy: 51.866, learning rate: 0.0001171875
+>>> Epoch 183 Test Avg Loss: 1.364, Test Accuracy: 51.948, learning rate: 0.0001171875
+>>> Epoch 184 Test Avg Loss: 1.378, Test Accuracy: 51.568, learning rate: 0.0001171875
+>>> Epoch 185 Test Avg Loss: 1.382, Test Accuracy: 51.232, learning rate: 0.0001171875
+>>> Epoch 186 Test Avg Loss: 1.385, Test Accuracy: 51.381, learning rate: 0.0001171875
+>>> Epoch 187 Test Avg Loss: 1.381, Test Accuracy: 51.598, learning rate: 0.0001171875
+>>> Epoch 188 Test Avg Loss: 1.375, Test Accuracy: 51.607, learning rate: 0.0001171875
+>>> Epoch 189 Test Avg Loss: 1.380, Test Accuracy: 51.312, learning rate: 0.0001171875
+>>> Epoch 190 Test Avg Loss: 1.383, Test Accuracy: 51.378, learning rate: 0.0001171875
+>>> Epoch 191 Test Avg Loss: 1.367, Test Accuracy: 51.869, learning rate: 0.0001171875
+>>> Epoch 192 Test Avg Loss: 1.374, Test Accuracy: 51.604, learning rate: 0.0001171875
+>>> Epoch 193 Test Avg Loss: 1.376, Test Accuracy: 51.461, learning rate: 0.0001171875
+>>> Epoch 194 Test Avg Loss: 1.381, Test Accuracy: 51.691, learning rate: 0.0001171875
+Epoch   194: reducing learning rate of group 0 to 5.8594e-05.
+>>> Epoch 195 Test Avg Loss: 1.357, Test Accuracy: 52.525, learning rate: 5.859375e-05
+>>> Epoch 196 Test Avg Loss: 1.355, Test Accuracy: 52.505, learning rate: 5.859375e-05
+>>> Epoch 197 Test Avg Loss: 1.357, Test Accuracy: 52.489, learning rate: 5.859375e-05
+>>> Epoch 198 Test Avg Loss: 1.360, Test Accuracy: 52.260, learning rate: 5.859375e-05
+>>> Epoch 199 Test Avg Loss: 1.361, Test Accuracy: 52.201, learning rate: 5.859375e-05
+>>> Epoch 200 Test Avg Loss: 1.366, Test Accuracy: 51.964, learning rate: 5.859375e-05
+>>> Epoch 201 Test Avg Loss: 1.362, Test Accuracy: 52.408, learning rate: 5.859375e-05
+>>> Epoch 202 Test Avg Loss: 1.360, Test Accuracy: 52.295, learning rate: 5.859375e-05
+>>> Epoch 203 Test Avg Loss: 1.367, Test Accuracy: 52.144, learning rate: 5.859375e-05
+>>> Epoch 204 Test Avg Loss: 1.370, Test Accuracy: 52.009, learning rate: 5.859375e-05
+>>> Epoch 205 Test Avg Loss: 1.365, Test Accuracy: 52.009, learning rate: 5.859375e-05
+>>> Epoch 206 Test Avg Loss: 1.365, Test Accuracy: 52.234, learning rate: 5.859375e-05
+>>> Epoch 207 Test Avg Loss: 1.365, Test Accuracy: 52.113, learning rate: 5.859375e-05
+>>> Epoch 208 Test Avg Loss: 1.365, Test Accuracy: 52.216, learning rate: 5.859375e-05
+>>> Epoch 209 Test Avg Loss: 1.368, Test Accuracy: 52.095, learning rate: 5.859375e-05
+Epoch   209: reducing learning rate of group 0 to 2.9297e-05.
+>>> Epoch 210 Test Avg Loss: 1.360, Test Accuracy: 52.696, learning rate: 2.9296875e-05
+>>> Epoch 211 Test Avg Loss: 1.362, Test Accuracy: 52.593, learning rate: 2.9296875e-05
+>>> Epoch 212 Test Avg Loss: 1.374, Test Accuracy: 51.918, learning rate: 2.9296875e-05
+>>> Epoch 213 Test Avg Loss: 1.363, Test Accuracy: 52.417, learning rate: 2.9296875e-05
+>>> Epoch 214 Test Avg Loss: 1.373, Test Accuracy: 52.213, learning rate: 2.9296875e-05
+>>> Epoch 215 Test Avg Loss: 1.373, Test Accuracy: 52.266, learning rate: 2.9296875e-05
+>>> Epoch 216 Test Avg Loss: 1.372, Test Accuracy: 52.295, learning rate: 2.9296875e-05
+>>> Epoch 217 Test Avg Loss: 1.380, Test Accuracy: 51.971, learning rate: 2.9296875e-05
+>>> Epoch 218 Test Avg Loss: 1.375, Test Accuracy: 51.984, learning rate: 2.9296875e-05
+>>> Epoch 219 Test Avg Loss: 1.376, Test Accuracy: 52.025, learning rate: 2.9296875e-05
+>>> Epoch 220 Test Avg Loss: 1.388, Test Accuracy: 51.530, learning rate: 2.9296875e-05
+>>> Epoch 221 Test Avg Loss: 1.378, Test Accuracy: 51.903, learning rate: 2.9296875e-05
+>>> Epoch 222 Test Avg Loss: 1.385, Test Accuracy: 51.510, learning rate: 2.9296875e-05
+>>> Epoch 223 Test Avg Loss: 1.385, Test Accuracy: 51.601, learning rate: 2.9296875e-05
+>>> Epoch 224 Test Avg Loss: 1.382, Test Accuracy: 51.751, learning rate: 2.9296875e-05
+Epoch   224: reducing learning rate of group 0 to 1.4648e-05.
+>>> Epoch 225 Test Avg Loss: 1.379, Test Accuracy: 52.087, learning rate: 1.46484375e-05
+>>> Epoch 226 Test Avg Loss: 1.389, Test Accuracy: 51.856, learning rate: 1.46484375e-05
+>>> Epoch 227 Test Avg Loss: 1.391, Test Accuracy: 51.709, learning rate: 1.46484375e-05
+>>> Epoch 228 Test Avg Loss: 1.389, Test Accuracy: 51.742, learning rate: 1.46484375e-05
+>>> Epoch 229 Test Avg Loss: 1.388, Test Accuracy: 51.685, learning rate: 1.46484375e-05
+>>> Epoch 230 Test Avg Loss: 1.392, Test Accuracy: 51.658, learning rate: 1.46484375e-05
+>>> Epoch 231 Test Avg Loss: 1.396, Test Accuracy: 51.541, learning rate: 1.46484375e-05
+>>> Epoch 232 Test Avg Loss: 1.390, Test Accuracy: 51.628, learning rate: 1.46484375e-05
+>>> Epoch 233 Test Avg Loss: 1.395, Test Accuracy: 51.577, learning rate: 1.46484375e-05
+>>> Epoch 234 Test Avg Loss: 1.395, Test Accuracy: 51.437, learning rate: 1.46484375e-05
+>>> Epoch 235 Test Avg Loss: 1.399, Test Accuracy: 51.518, learning rate: 1.46484375e-05
+>>> Epoch 236 Test Avg Loss: 1.401, Test Accuracy: 51.423, learning rate: 1.46484375e-05
+>>> Epoch 237 Test Avg Loss: 1.399, Test Accuracy: 51.443, learning rate: 1.46484375e-05
+>>> Epoch 238 Test Avg Loss: 1.399, Test Accuracy: 51.462, learning rate: 1.46484375e-05
+>>> Epoch 239 Test Avg Loss: 1.398, Test Accuracy: 51.446, learning rate: 1.46484375e-05
+Epoch   239: reducing learning rate of group 0 to 7.3242e-06.
+>>> Epoch 240 Test Avg Loss: 1.401, Test Accuracy: 51.529, learning rate: 7.32421875e-06
+>>> Epoch 241 Test Avg Loss: 1.403, Test Accuracy: 51.490, learning rate: 7.32421875e-06
+>>> Epoch 242 Test Avg Loss: 1.403, Test Accuracy: 51.209, learning rate: 7.32421875e-06
+>>> Epoch 243 Test Avg Loss: 1.405, Test Accuracy: 51.311, learning rate: 7.32421875e-06
+>>> Epoch 244 Test Avg Loss: 1.407, Test Accuracy: 51.093, learning rate: 7.32421875e-06
+>>> Epoch 245 Test Avg Loss: 1.409, Test Accuracy: 51.146, learning rate: 7.32421875e-06
+>>> Epoch 246 Test Avg Loss: 1.409, Test Accuracy: 51.176, learning rate: 7.32421875e-06
+>>> Epoch 247 Test Avg Loss: 1.409, Test Accuracy: 50.989, learning rate: 7.32421875e-06
+>>> Epoch 248 Test Avg Loss: 1.415, Test Accuracy: 50.980, learning rate: 7.32421875e-06
+>>> Epoch 249 Test Avg Loss: 1.413, Test Accuracy: 50.971, learning rate: 7.32421875e-06
+>>> Epoch 250 Test Avg Loss: 1.416, Test Accuracy: 51.034, learning rate: 7.32421875e-06
+>>> Epoch 251 Test Avg Loss: 1.414, Test Accuracy: 50.928, learning rate: 7.32421875e-06
+>>> Epoch 252 Test Avg Loss: 1.418, Test Accuracy: 50.944, learning rate: 7.32421875e-06
+>>> Epoch 253 Test Avg Loss: 1.414, Test Accuracy: 50.859, learning rate: 7.32421875e-06
+>>> Epoch 254 Test Avg Loss: 1.417, Test Accuracy: 50.931, learning rate: 7.32421875e-06
+Epoch   254: reducing learning rate of group 0 to 3.6621e-06.
+>>> Epoch 255 Test Avg Loss: 1.418, Test Accuracy: 50.782, learning rate: 3.662109375e-06
+>>> Epoch 256 Test Avg Loss: 1.420, Test Accuracy: 50.853, learning rate: 3.662109375e-06
+>>> Epoch 257 Test Avg Loss: 1.420, Test Accuracy: 50.732, learning rate: 3.662109375e-06
+>>> Epoch 258 Test Avg Loss: 1.422, Test Accuracy: 50.591, learning rate: 3.662109375e-06
+>>> Epoch 259 Test Avg Loss: 1.424, Test Accuracy: 50.428, learning rate: 3.662109375e-06
+>>> Epoch 260 Test Avg Loss: 1.424, Test Accuracy: 50.668, learning rate: 3.662109375e-06
+>>> Epoch 261 Test Avg Loss: 1.425, Test Accuracy: 50.375, learning rate: 3.662109375e-06
+>>> Epoch 262 Test Avg Loss: 1.426, Test Accuracy: 50.606, learning rate: 3.662109375e-06
+>>> Epoch 263 Test Avg Loss: 1.423, Test Accuracy: 50.506, learning rate: 3.662109375e-06
+>>> Epoch 264 Test Avg Loss: 1.427, Test Accuracy: 50.373, learning rate: 3.662109375e-06
+>>> Epoch 265 Test Avg Loss: 1.431, Test Accuracy: 50.187, learning rate: 3.662109375e-06
+>>> Epoch 266 Test Avg Loss: 1.428, Test Accuracy: 50.148, learning rate: 3.662109375e-06
+>>> Epoch 267 Test Avg Loss: 1.428, Test Accuracy: 50.119, learning rate: 3.662109375e-06
+>>> Epoch 268 Test Avg Loss: 1.429, Test Accuracy: 50.226, learning rate: 3.662109375e-06
+>>> Epoch 269 Test Avg Loss: 1.434, Test Accuracy: 50.080, learning rate: 3.662109375e-06
+Epoch   269: reducing learning rate of group 0 to 1.8311e-06.
+>>> Epoch 270 Test Avg Loss: 1.433, Test Accuracy: 50.002, learning rate: 1.8310546875e-06
+>>> Epoch 271 Test Avg Loss: 1.433, Test Accuracy: 50.129, learning rate: 1.8310546875e-06
+>>> Epoch 272 Test Avg Loss: 1.433, Test Accuracy: 50.314, learning rate: 1.8310546875e-06
+>>> Epoch 273 Test Avg Loss: 1.435, Test Accuracy: 50.074, learning rate: 1.8310546875e-06
+>>> Epoch 274 Test Avg Loss: 1.436, Test Accuracy: 50.139, learning rate: 1.8310546875e-06
+>>> Epoch 275 Test Avg Loss: 1.434, Test Accuracy: 50.311, learning rate: 1.8310546875e-06
+>>> Epoch 276 Test Avg Loss: 1.435, Test Accuracy: 50.110, learning rate: 1.8310546875e-06
+>>> Epoch 277 Test Avg Loss: 1.438, Test Accuracy: 49.957, learning rate: 1.8310546875e-06
+>>> Epoch 278 Test Avg Loss: 1.440, Test Accuracy: 50.097, learning rate: 1.8310546875e-06
+>>> Epoch 279 Test Avg Loss: 1.435, Test Accuracy: 49.839, learning rate: 1.8310546875e-06
+>>> Epoch 280 Test Avg Loss: 1.436, Test Accuracy: 49.999, learning rate: 1.8310546875e-06
+>>> Epoch 281 Test Avg Loss: 1.436, Test Accuracy: 50.061, learning rate: 1.8310546875e-06
+>>> Epoch 282 Test Avg Loss: 1.438, Test Accuracy: 50.055, learning rate: 1.8310546875e-06
+>>> Epoch 283 Test Avg Loss: 1.438, Test Accuracy: 50.025, learning rate: 1.8310546875e-06
+>>> Epoch 284 Test Avg Loss: 1.439, Test Accuracy: 50.009, learning rate: 1.8310546875e-06
+Epoch   284: reducing learning rate of group 0 to 9.1553e-07.
+>>> Epoch 285 Test Avg Loss: 1.439, Test Accuracy: 50.109, learning rate: 9.1552734375e-07
+>>> Epoch 286 Test Avg Loss: 1.440, Test Accuracy: 49.840, learning rate: 9.1552734375e-07
+>>> Epoch 287 Test Avg Loss: 1.438, Test Accuracy: 49.987, learning rate: 9.1552734375e-07
+>>> Epoch 288 Test Avg Loss: 1.439, Test Accuracy: 50.187, learning rate: 9.1552734375e-07
+>>> Epoch 289 Test Avg Loss: 1.439, Test Accuracy: 50.120, learning rate: 9.1552734375e-07
+>>> Epoch 290 Test Avg Loss: 1.441, Test Accuracy: 50.029, learning rate: 9.1552734375e-07
+>>> Epoch 291 Test Avg Loss: 1.444, Test Accuracy: 49.948, learning rate: 9.1552734375e-07
+>>> Epoch 292 Test Avg Loss: 1.442, Test Accuracy: 50.080, learning rate: 9.1552734375e-07
+>>> Epoch 293 Test Avg Loss: 1.441, Test Accuracy: 49.732, learning rate: 9.1552734375e-07
+>>> Epoch 294 Test Avg Loss: 1.442, Test Accuracy: 49.830, learning rate: 9.1552734375e-07
+>>> Epoch 295 Test Avg Loss: 1.441, Test Accuracy: 49.905, learning rate: 9.1552734375e-07
+>>> Epoch 296 Test Avg Loss: 1.440, Test Accuracy: 50.126, learning rate: 9.1552734375e-07
+>>> Epoch 297 Test Avg Loss: 1.443, Test Accuracy: 50.016, learning rate: 9.1552734375e-07
+>>> Epoch 298 Test Avg Loss: 1.443, Test Accuracy: 50.029, learning rate: 9.1552734375e-07
+>>> Epoch 299 Test Avg Loss: 1.441, Test Accuracy: 49.963, learning rate: 9.1552734375e-07
+Epoch   299: reducing learning rate of group 0 to 4.5776e-07.
+>>> Epoch 300 Test Avg Loss: 1.441, Test Accuracy: 49.989, learning rate: 4.57763671875e-07
+Done ##############################################
+>>> using 56 workers
+Files already downloaded and verified
+Namespace(alpha=1.0, beta1=0.9, beta2=0.999, datapath='./data/', dataset='cifar10', epochs=300, expand_labels=False, factor=0.5, log_dir='./runs', lr=0.03, min_lr=1e-07, model_depth=28, model_dir='./saved_models', model_width=2, momentum=0.9, multiplier=3, num_classes=10, num_labeled=250, num_workers=56, patience=10, test_batch=1024, threshold=0.95, train_batch=250, vat_eps=8.0, vat_iter=4, vat_xi=8.0, wandb=False, warmup_epochs=35, wd=5e-05)
+>>> Warmup Training
+>>> Epoch 1 Train Avg Loss: 2.327, Train Accuracy: 9.200
+>>> Epoch 1 Test Avg Loss: 6639883059.200, Test Accuracy: 9.999, learning rate: 0.03
+>>> Epoch 2 Train Avg Loss: 2.697, Train Accuracy: 11.200
+>>> Epoch 2 Test Avg Loss: 46590372249.600, Test Accuracy: 10.005, learning rate: 0.03
+>>> Epoch 3 Train Avg Loss: 2.365, Train Accuracy: 9.600
+>>> Epoch 3 Test Avg Loss: 929697175961.600, Test Accuracy: 9.999, learning rate: 0.03
+>>> Epoch 4 Train Avg Loss: 2.416, Train Accuracy: 10.400
+>>> Epoch 4 Test Avg Loss: 39576637849.600, Test Accuracy: 9.999, learning rate: 0.03
+>>> Epoch 5 Train Avg Loss: 2.270, Train Accuracy: 10.800
+>>> Epoch 5 Test Avg Loss: 1082384723.200, Test Accuracy: 9.999, learning rate: 0.03
+>>> Epoch 6 Train Avg Loss: 2.264, Train Accuracy: 13.600
+>>> Epoch 6 Test Avg Loss: 85930850.400, Test Accuracy: 9.999, learning rate: 0.03
+>>> Epoch 7 Train Avg Loss: 2.242, Train Accuracy: 12.400
+>>> Epoch 7 Test Avg Loss: 13761809.200, Test Accuracy: 9.999, learning rate: 0.03
+>>> Epoch 8 Train Avg Loss: 2.224, Train Accuracy: 15.200
+>>> Epoch 8 Test Avg Loss: 3028026.425, Test Accuracy: 9.999, learning rate: 0.03
+>>> Epoch 9 Train Avg Loss: 2.168, Train Accuracy: 17.200
+>>> Epoch 9 Test Avg Loss: 783298.625, Test Accuracy: 9.999, learning rate: 0.03
+>>> Epoch 10 Train Avg Loss: 2.120, Train Accuracy: 22.800
+>>> Epoch 10 Test Avg Loss: 213199.473, Test Accuracy: 9.999, learning rate: 0.03
+>>> Epoch 11 Train Avg Loss: 2.074, Train Accuracy: 21.600
+>>> Epoch 11 Test Avg Loss: 76072.516, Test Accuracy: 9.999, learning rate: 0.03
+>>> Epoch 12 Train Avg Loss: 2.035, Train Accuracy: 22.400
+>>> Epoch 12 Test Avg Loss: 35352.022, Test Accuracy: 9.999, learning rate: 0.03
+>>> Epoch 13 Train Avg Loss: 1.978, Train Accuracy: 22.800
+>>> Epoch 13 Test Avg Loss: 22127.987, Test Accuracy: 9.999, learning rate: 0.03
+>>> Epoch 14 Train Avg Loss: 1.964, Train Accuracy: 26.800
+>>> Epoch 14 Test Avg Loss: 7387.710, Test Accuracy: 9.999, learning rate: 0.03
+>>> Epoch 15 Train Avg Loss: 1.951, Train Accuracy: 24.800
+>>> Epoch 15 Test Avg Loss: 3093.028, Test Accuracy: 10.009, learning rate: 0.03
+>>> Epoch 16 Train Avg Loss: 1.912, Train Accuracy: 26.800
+>>> Epoch 16 Test Avg Loss: 1928.329, Test Accuracy: 10.028, learning rate: 0.03
+>>> Epoch 17 Train Avg Loss: 1.887, Train Accuracy: 26.800
+>>> Epoch 17 Test Avg Loss: 987.133, Test Accuracy: 10.129, learning rate: 0.03
+>>> Epoch 18 Train Avg Loss: 1.867, Train Accuracy: 29.200
+>>> Epoch 18 Test Avg Loss: 733.508, Test Accuracy: 10.164, learning rate: 0.03
+>>> Epoch 19 Train Avg Loss: 1.859, Train Accuracy: 28.400
+>>> Epoch 19 Test Avg Loss: 483.118, Test Accuracy: 10.252, learning rate: 0.03
+>>> Epoch 20 Train Avg Loss: 1.824, Train Accuracy: 26.800
+>>> Epoch 20 Test Avg Loss: 440.713, Test Accuracy: 10.375, learning rate: 0.03
+>>> Epoch 21 Train Avg Loss: 1.911, Train Accuracy: 24.800
+>>> Epoch 21 Test Avg Loss: 180.364, Test Accuracy: 10.597, learning rate: 0.03
+>>> Epoch 22 Train Avg Loss: 1.869, Train Accuracy: 26.400
+>>> Epoch 22 Test Avg Loss: 174.123, Test Accuracy: 10.418, learning rate: 0.03
+>>> Epoch 23 Train Avg Loss: 1.852, Train Accuracy: 28.400
+>>> Epoch 23 Test Avg Loss: 252.925, Test Accuracy: 10.370, learning rate: 0.03
+>>> Epoch 24 Train Avg Loss: 1.876, Train Accuracy: 30.400
+>>> Epoch 24 Test Avg Loss: 97.351, Test Accuracy: 11.780, learning rate: 0.03
+>>> Epoch 25 Train Avg Loss: 1.835, Train Accuracy: 29.200
+>>> Epoch 25 Test Avg Loss: 57.925, Test Accuracy: 13.273, learning rate: 0.03
+>>> Epoch 26 Train Avg Loss: 1.835, Train Accuracy: 28.400
+>>> Epoch 26 Test Avg Loss: 41.274, Test Accuracy: 13.969, learning rate: 0.03
+>>> Epoch 27 Train Avg Loss: 1.800, Train Accuracy: 27.600
+>>> Epoch 27 Test Avg Loss: 26.857, Test Accuracy: 14.035, learning rate: 0.03
+>>> Epoch 28 Train Avg Loss: 1.800, Train Accuracy: 28.800
+>>> Epoch 28 Test Avg Loss: 16.590, Test Accuracy: 14.429, learning rate: 0.03
+>>> Epoch 29 Train Avg Loss: 1.776, Train Accuracy: 30.400
+>>> Epoch 29 Test Avg Loss: 10.230, Test Accuracy: 15.127, learning rate: 0.03
+>>> Epoch 30 Train Avg Loss: 1.764, Train Accuracy: 30.800
+>>> Epoch 30 Test Avg Loss: 7.895, Test Accuracy: 15.358, learning rate: 0.03
+>>> Epoch 31 Train Avg Loss: 1.762, Train Accuracy: 34.400
+>>> Epoch 31 Test Avg Loss: 7.952, Test Accuracy: 16.133, learning rate: 0.03
+>>> Epoch 32 Train Avg Loss: 1.745, Train Accuracy: 31.200
+>>> Epoch 32 Test Avg Loss: 6.696, Test Accuracy: 16.612, learning rate: 0.03
+>>> Epoch 33 Train Avg Loss: 1.671, Train Accuracy: 31.600
+>>> Epoch 33 Test Avg Loss: 5.697, Test Accuracy: 16.926, learning rate: 0.03
+>>> Epoch 34 Train Avg Loss: 1.734, Train Accuracy: 34.400
+>>> Epoch 34 Test Avg Loss: 5.378, Test Accuracy: 17.149, learning rate: 0.03
+>>> Epoch 35 Train Avg Loss: 1.680, Train Accuracy: 35.600
+>>> Epoch 35 Test Avg Loss: 4.709, Test Accuracy: 17.236, learning rate: 0.03
+>>> Loading Best Model-val_loss: 4.709
+Model loaded from epoch 35
+>>> VAT Training
+>>> Epoch 36 Test Avg Loss: 2.059, Test Accuracy: 23.932, learning rate: 0.03
+>>> Epoch 37 Test Avg Loss: 2.058, Test Accuracy: 26.614, learning rate: 0.03
+>>> Epoch 38 Test Avg Loss: 2.029, Test Accuracy: 26.446, learning rate: 0.03
+>>> Epoch 39 Test Avg Loss: 2.115, Test Accuracy: 21.687, learning rate: 0.03
+>>> Epoch 40 Test Avg Loss: 2.045, Test Accuracy: 24.738, learning rate: 0.03
+>>> Epoch 41 Test Avg Loss: 2.073, Test Accuracy: 24.762, learning rate: 0.03
+>>> Epoch 42 Test Avg Loss: 2.273, Test Accuracy: 13.197, learning rate: 0.03
+>>> Epoch 43 Test Avg Loss: 2.185, Test Accuracy: 18.495, learning rate: 0.03
+>>> Epoch 44 Test Avg Loss: 2.131, Test Accuracy: 18.911, learning rate: 0.03
+>>> Epoch 45 Test Avg Loss: 2.132, Test Accuracy: 20.764, learning rate: 0.03
+>>> Epoch 46 Test Avg Loss: 2.049, Test Accuracy: 24.675, learning rate: 0.03
+>>> Epoch 47 Test Avg Loss: 2.097, Test Accuracy: 21.171, learning rate: 0.03
+>>> Epoch 48 Test Avg Loss: 2.025, Test Accuracy: 24.850, learning rate: 0.03
+>>> Epoch 49 Test Avg Loss: 2.021, Test Accuracy: 25.632, learning rate: 0.03
+>>> Epoch 50 Test Avg Loss: 2.021, Test Accuracy: 24.614, learning rate: 0.03
+>>> Epoch 51 Test Avg Loss: 2.084, Test Accuracy: 21.429, learning rate: 0.03
+>>> Epoch 52 Test Avg Loss: 2.148, Test Accuracy: 21.918, learning rate: 0.03
+>>> Epoch 53 Test Avg Loss: 2.271, Test Accuracy: 19.645, learning rate: 0.03
+>>> Epoch 54 Test Avg Loss: 2.310, Test Accuracy: 20.964, learning rate: 0.03
+>>> Epoch 55 Test Avg Loss: 2.383, Test Accuracy: 21.777, learning rate: 0.03
+>>> Epoch 56 Test Avg Loss: 2.302, Test Accuracy: 17.977, learning rate: 0.03
+>>> Epoch 57 Test Avg Loss: 2.588, Test Accuracy: 18.163, learning rate: 0.03
+>>> Epoch 58 Test Avg Loss: 3.137, Test Accuracy: 17.333, learning rate: 0.03
+>>> Epoch 59 Test Avg Loss: 2.278, Test Accuracy: 18.936, learning rate: 0.03
+>>> Epoch 60 Test Avg Loss: 2.552, Test Accuracy: 18.748, learning rate: 0.03
+Epoch    60: reducing learning rate of group 0 to 1.5000e-02.
+>>> Epoch 61 Test Avg Loss: 2.883, Test Accuracy: 17.592, learning rate: 0.015
+>>> Epoch 62 Test Avg Loss: 2.611, Test Accuracy: 15.791, learning rate: 0.015
+>>> Epoch 63 Test Avg Loss: 2.261, Test Accuracy: 18.148, learning rate: 0.015
+>>> Epoch 64 Test Avg Loss: 2.556, Test Accuracy: 17.956, learning rate: 0.015
+>>> Epoch 65 Test Avg Loss: 2.767, Test Accuracy: 16.432, learning rate: 0.015
+>>> Epoch 66 Test Avg Loss: 2.580, Test Accuracy: 16.981, learning rate: 0.015
+>>> Epoch 67 Test Avg Loss: 2.645, Test Accuracy: 16.603, learning rate: 0.015
+>>> Epoch 68 Test Avg Loss: 2.886, Test Accuracy: 15.371, learning rate: 0.015
+>>> Epoch 69 Test Avg Loss: 2.829, Test Accuracy: 16.208, learning rate: 0.015
+>>> Epoch 70 Test Avg Loss: 2.724, Test Accuracy: 17.946, learning rate: 0.015
+>>> Epoch 71 Test Avg Loss: 2.603, Test Accuracy: 17.809, learning rate: 0.015
+>>> Epoch 72 Test Avg Loss: 2.677, Test Accuracy: 16.371, learning rate: 0.015
+>>> Epoch 73 Test Avg Loss: 2.430, Test Accuracy: 18.981, learning rate: 0.015
+>>> Epoch 74 Test Avg Loss: 2.491, Test Accuracy: 19.416, learning rate: 0.015
+>>> Epoch 75 Test Avg Loss: 2.631, Test Accuracy: 19.999, learning rate: 0.015
+Epoch    75: reducing learning rate of group 0 to 7.5000e-03.
+>>> Epoch 76 Test Avg Loss: 2.362, Test Accuracy: 22.712, learning rate: 0.0075
+>>> Epoch 77 Test Avg Loss: 2.302, Test Accuracy: 22.734, learning rate: 0.0075
+>>> Epoch 78 Test Avg Loss: 2.219, Test Accuracy: 22.148, learning rate: 0.0075
+>>> Epoch 79 Test Avg Loss: 2.394, Test Accuracy: 17.034, learning rate: 0.0075
+>>> Epoch 80 Test Avg Loss: 2.321, Test Accuracy: 19.516, learning rate: 0.0075
+>>> Epoch 81 Test Avg Loss: 2.411, Test Accuracy: 19.493, learning rate: 0.0075
+>>> Epoch 82 Test Avg Loss: 2.313, Test Accuracy: 20.209, learning rate: 0.0075
+>>> Epoch 83 Test Avg Loss: 2.368, Test Accuracy: 20.100, learning rate: 0.0075
+>>> Epoch 84 Test Avg Loss: 2.380, Test Accuracy: 18.112, learning rate: 0.0075
+>>> Epoch 85 Test Avg Loss: 2.375, Test Accuracy: 19.253, learning rate: 0.0075
+>>> Epoch 86 Test Avg Loss: 2.423, Test Accuracy: 18.356, learning rate: 0.0075
+>>> Epoch 87 Test Avg Loss: 2.447, Test Accuracy: 22.334, learning rate: 0.0075
+>>> Epoch 88 Test Avg Loss: 2.421, Test Accuracy: 17.586, learning rate: 0.0075
+>>> Epoch 89 Test Avg Loss: 2.249, Test Accuracy: 19.221, learning rate: 0.0075
+>>> Epoch 90 Test Avg Loss: 2.451, Test Accuracy: 18.463, learning rate: 0.0075
+Epoch    90: reducing learning rate of group 0 to 3.7500e-03.
+>>> Epoch 91 Test Avg Loss: 2.612, Test Accuracy: 18.835, learning rate: 0.00375
+>>> Epoch 92 Test Avg Loss: 2.502, Test Accuracy: 19.824, learning rate: 0.00375
+>>> Epoch 93 Test Avg Loss: 2.789, Test Accuracy: 19.683, learning rate: 0.00375
+>>> Epoch 94 Test Avg Loss: 2.489, Test Accuracy: 19.291, learning rate: 0.00375
+>>> Epoch 95 Test Avg Loss: 2.616, Test Accuracy: 19.839, learning rate: 0.00375
+>>> Epoch 96 Test Avg Loss: 2.368, Test Accuracy: 20.783, learning rate: 0.00375
+>>> Epoch 97 Test Avg Loss: 2.627, Test Accuracy: 19.316, learning rate: 0.00375
+>>> Epoch 98 Test Avg Loss: 3.621, Test Accuracy: 16.548, learning rate: 0.00375
+>>> Epoch 99 Test Avg Loss: 3.195, Test Accuracy: 16.668, learning rate: 0.00375
+>>> Epoch 100 Test Avg Loss: 3.120, Test Accuracy: 19.619, learning rate: 0.00375
+>>> Epoch 101 Test Avg Loss: 3.383, Test Accuracy: 19.903, learning rate: 0.00375
+>>> Epoch 102 Test Avg Loss: 3.684, Test Accuracy: 17.573, learning rate: 0.00375
+>>> Epoch 103 Test Avg Loss: 3.800, Test Accuracy: 18.480, learning rate: 0.00375
+>>> Epoch 104 Test Avg Loss: 5.793, Test Accuracy: 15.690, learning rate: 0.00375
+>>> Epoch 105 Test Avg Loss: 2.847, Test Accuracy: 26.458, learning rate: 0.00375
+Epoch   105: reducing learning rate of group 0 to 1.8750e-03.
+>>> Epoch 106 Test Avg Loss: 3.843, Test Accuracy: 20.277, learning rate: 0.001875
+>>> Epoch 107 Test Avg Loss: 2.843, Test Accuracy: 23.264, learning rate: 0.001875
+>>> Epoch 108 Test Avg Loss: 3.428, Test Accuracy: 22.384, learning rate: 0.001875
+>>> Epoch 109 Test Avg Loss: 2.672, Test Accuracy: 25.622, learning rate: 0.001875
+>>> Epoch 110 Test Avg Loss: 3.011, Test Accuracy: 22.224, learning rate: 0.001875
+>>> Epoch 111 Test Avg Loss: 2.760, Test Accuracy: 22.870, learning rate: 0.001875
+>>> Epoch 112 Test Avg Loss: 3.239, Test Accuracy: 22.919, learning rate: 0.001875
+>>> Epoch 113 Test Avg Loss: 3.609, Test Accuracy: 19.794, learning rate: 0.001875
+>>> Epoch 114 Test Avg Loss: 2.906, Test Accuracy: 22.655, learning rate: 0.001875
+>>> Epoch 115 Test Avg Loss: 2.898, Test Accuracy: 22.890, learning rate: 0.001875
+>>> Epoch 116 Test Avg Loss: 2.733, Test Accuracy: 23.372, learning rate: 0.001875
+>>> Epoch 117 Test Avg Loss: 3.477, Test Accuracy: 19.237, learning rate: 0.001875
+>>> Epoch 118 Test Avg Loss: 3.964, Test Accuracy: 20.177, learning rate: 0.001875
+>>> Epoch 119 Test Avg Loss: 2.965, Test Accuracy: 21.731, learning rate: 0.001875
+>>> Epoch 120 Test Avg Loss: 3.085, Test Accuracy: 21.084, learning rate: 0.001875
+Epoch   120: reducing learning rate of group 0 to 9.3750e-04.
+>>> Epoch 121 Test Avg Loss: 2.882, Test Accuracy: 24.276, learning rate: 0.0009375
+>>> Epoch 122 Test Avg Loss: 3.666, Test Accuracy: 19.527, learning rate: 0.0009375
+>>> Epoch 123 Test Avg Loss: 3.626, Test Accuracy: 20.302, learning rate: 0.0009375
+>>> Epoch 124 Test Avg Loss: 3.738, Test Accuracy: 18.538, learning rate: 0.0009375
+>>> Epoch 125 Test Avg Loss: 4.076, Test Accuracy: 18.149, learning rate: 0.0009375
+>>> Epoch 126 Test Avg Loss: 3.456, Test Accuracy: 19.246, learning rate: 0.0009375
+>>> Epoch 127 Test Avg Loss: 3.915, Test Accuracy: 15.665, learning rate: 0.0009375
+>>> Epoch 128 Test Avg Loss: 3.171, Test Accuracy: 22.256, learning rate: 0.0009375
+>>> Epoch 129 Test Avg Loss: 4.429, Test Accuracy: 15.306, learning rate: 0.0009375
+>>> Epoch 130 Test Avg Loss: 3.062, Test Accuracy: 20.676, learning rate: 0.0009375
+>>> Epoch 131 Test Avg Loss: 3.773, Test Accuracy: 16.980, learning rate: 0.0009375
+>>> Epoch 132 Test Avg Loss: 3.631, Test Accuracy: 17.167, learning rate: 0.0009375
+>>> Epoch 133 Test Avg Loss: 2.819, Test Accuracy: 23.161, learning rate: 0.0009375
+>>> Epoch 134 Test Avg Loss: 2.529, Test Accuracy: 26.351, learning rate: 0.0009375
+>>> Epoch 135 Test Avg Loss: 2.782, Test Accuracy: 22.679, learning rate: 0.0009375
+Epoch   135: reducing learning rate of group 0 to 4.6875e-04.
+>>> Epoch 136 Test Avg Loss: 2.346, Test Accuracy: 27.775, learning rate: 0.00046875
+>>> Epoch 137 Test Avg Loss: 2.239, Test Accuracy: 28.374, learning rate: 0.00046875
+>>> Epoch 138 Test Avg Loss: 2.285, Test Accuracy: 27.746, learning rate: 0.00046875
+>>> Epoch 139 Test Avg Loss: 2.213, Test Accuracy: 28.687, learning rate: 0.00046875
+>>> Epoch 140 Test Avg Loss: 2.084, Test Accuracy: 31.306, learning rate: 0.00046875
+>>> Epoch 141 Test Avg Loss: 2.128, Test Accuracy: 29.596, learning rate: 0.00046875
+>>> Epoch 142 Test Avg Loss: 2.079, Test Accuracy: 29.960, learning rate: 0.00046875
+>>> Epoch 143 Test Avg Loss: 2.228, Test Accuracy: 28.460, learning rate: 0.00046875
+>>> Epoch 144 Test Avg Loss: 2.190, Test Accuracy: 27.739, learning rate: 0.00046875
+>>> Epoch 145 Test Avg Loss: 2.032, Test Accuracy: 30.602, learning rate: 0.00046875
+>>> Epoch 146 Test Avg Loss: 2.187, Test Accuracy: 27.702, learning rate: 0.00046875
+>>> Epoch 147 Test Avg Loss: 2.116, Test Accuracy: 27.799, learning rate: 0.00046875
+>>> Epoch 148 Test Avg Loss: 2.158, Test Accuracy: 26.860, learning rate: 0.00046875
+>>> Epoch 149 Test Avg Loss: 2.071, Test Accuracy: 28.483, learning rate: 0.00046875
+>>> Epoch 150 Test Avg Loss: 2.041, Test Accuracy: 28.627, learning rate: 0.00046875
+Epoch   150: reducing learning rate of group 0 to 2.3437e-04.
+>>> Epoch 151 Test Avg Loss: 2.049, Test Accuracy: 28.780, learning rate: 0.000234375
+>>> Epoch 152 Test Avg Loss: 2.011, Test Accuracy: 29.755, learning rate: 0.000234375
+>>> Epoch 153 Test Avg Loss: 2.017, Test Accuracy: 30.234, learning rate: 0.000234375
+>>> Epoch 154 Test Avg Loss: 2.001, Test Accuracy: 29.986, learning rate: 0.000234375
+>>> Epoch 155 Test Avg Loss: 1.996, Test Accuracy: 30.217, learning rate: 0.000234375
+>>> Epoch 156 Test Avg Loss: 1.990, Test Accuracy: 30.229, learning rate: 0.000234375
+>>> Epoch 157 Test Avg Loss: 1.988, Test Accuracy: 30.460, learning rate: 0.000234375
+>>> Epoch 158 Test Avg Loss: 1.999, Test Accuracy: 29.930, learning rate: 0.000234375
+>>> Epoch 159 Test Avg Loss: 1.977, Test Accuracy: 30.814, learning rate: 0.000234375
+>>> Epoch 160 Test Avg Loss: 2.000, Test Accuracy: 30.247, learning rate: 0.000234375
+>>> Epoch 161 Test Avg Loss: 1.988, Test Accuracy: 30.867, learning rate: 0.000234375
+>>> Epoch 162 Test Avg Loss: 1.993, Test Accuracy: 29.943, learning rate: 0.000234375
+>>> Epoch 163 Test Avg Loss: 1.996, Test Accuracy: 30.085, learning rate: 0.000234375
+>>> Epoch 164 Test Avg Loss: 1.978, Test Accuracy: 30.741, learning rate: 0.000234375
+>>> Epoch 165 Test Avg Loss: 2.002, Test Accuracy: 30.379, learning rate: 0.000234375
+>>> Epoch 166 Test Avg Loss: 2.034, Test Accuracy: 29.565, learning rate: 0.000234375
+>>> Epoch 167 Test Avg Loss: 1.966, Test Accuracy: 31.638, learning rate: 0.000234375
+>>> Epoch 168 Test Avg Loss: 1.997, Test Accuracy: 30.631, learning rate: 0.000234375
+>>> Epoch 169 Test Avg Loss: 1.975, Test Accuracy: 31.201, learning rate: 0.000234375
+>>> Epoch 170 Test Avg Loss: 1.963, Test Accuracy: 31.583, learning rate: 0.000234375
+>>> Epoch 171 Test Avg Loss: 1.959, Test Accuracy: 31.490, learning rate: 0.000234375
+>>> Epoch 172 Test Avg Loss: 1.959, Test Accuracy: 31.346, learning rate: 0.000234375
+>>> Epoch 173 Test Avg Loss: 1.974, Test Accuracy: 31.244, learning rate: 0.000234375
+>>> Epoch 174 Test Avg Loss: 1.952, Test Accuracy: 31.613, learning rate: 0.000234375
+>>> Epoch 175 Test Avg Loss: 1.987, Test Accuracy: 30.973, learning rate: 0.000234375
+>>> Epoch 176 Test Avg Loss: 1.951, Test Accuracy: 31.511, learning rate: 0.000234375
+>>> Epoch 177 Test Avg Loss: 1.979, Test Accuracy: 30.963, learning rate: 0.000234375
+>>> Epoch 178 Test Avg Loss: 1.967, Test Accuracy: 31.531, learning rate: 0.000234375
+>>> Epoch 179 Test Avg Loss: 1.960, Test Accuracy: 31.259, learning rate: 0.000234375
+>>> Epoch 180 Test Avg Loss: 1.959, Test Accuracy: 31.602, learning rate: 0.000234375
+>>> Epoch 181 Test Avg Loss: 1.956, Test Accuracy: 31.652, learning rate: 0.000234375
+>>> Epoch 182 Test Avg Loss: 1.976, Test Accuracy: 31.080, learning rate: 0.000234375
+>>> Epoch 183 Test Avg Loss: 1.951, Test Accuracy: 31.745, learning rate: 0.000234375
+>>> Epoch 184 Test Avg Loss: 2.011, Test Accuracy: 29.892, learning rate: 0.000234375
+>>> Epoch 185 Test Avg Loss: 1.978, Test Accuracy: 30.629, learning rate: 0.000234375
+>>> Epoch 186 Test Avg Loss: 1.967, Test Accuracy: 31.185, learning rate: 0.000234375
+>>> Epoch 187 Test Avg Loss: 1.971, Test Accuracy: 31.087, learning rate: 0.000234375
+Epoch   187: reducing learning rate of group 0 to 1.1719e-04.
+>>> Epoch 188 Test Avg Loss: 2.004, Test Accuracy: 29.797, learning rate: 0.0001171875
+>>> Epoch 189 Test Avg Loss: 1.990, Test Accuracy: 30.342, learning rate: 0.0001171875
+>>> Epoch 190 Test Avg Loss: 1.973, Test Accuracy: 30.511, learning rate: 0.0001171875
+>>> Epoch 191 Test Avg Loss: 2.054, Test Accuracy: 28.291, learning rate: 0.0001171875
+>>> Epoch 192 Test Avg Loss: 1.962, Test Accuracy: 30.444, learning rate: 0.0001171875
+>>> Epoch 193 Test Avg Loss: 1.971, Test Accuracy: 30.046, learning rate: 0.0001171875
+>>> Epoch 194 Test Avg Loss: 1.987, Test Accuracy: 28.940, learning rate: 0.0001171875
+>>> Epoch 195 Test Avg Loss: 1.971, Test Accuracy: 29.583, learning rate: 0.0001171875
+>>> Epoch 196 Test Avg Loss: 1.981, Test Accuracy: 29.748, learning rate: 0.0001171875
+>>> Epoch 197 Test Avg Loss: 1.991, Test Accuracy: 28.854, learning rate: 0.0001171875
+>>> Epoch 198 Test Avg Loss: 2.021, Test Accuracy: 27.819, learning rate: 0.0001171875
+>>> Epoch 199 Test Avg Loss: 2.022, Test Accuracy: 27.706, learning rate: 0.0001171875
+>>> Epoch 200 Test Avg Loss: 2.028, Test Accuracy: 27.446, learning rate: 0.0001171875
+>>> Epoch 201 Test Avg Loss: 2.009, Test Accuracy: 27.699, learning rate: 0.0001171875
+>>> Epoch 202 Test Avg Loss: 2.048, Test Accuracy: 26.855, learning rate: 0.0001171875
+Epoch   202: reducing learning rate of group 0 to 5.8594e-05.
+>>> Epoch 203 Test Avg Loss: 2.025, Test Accuracy: 27.607, learning rate: 5.859375e-05
+>>> Epoch 204 Test Avg Loss: 2.073, Test Accuracy: 26.074, learning rate: 5.859375e-05
+>>> Epoch 205 Test Avg Loss: 2.108, Test Accuracy: 25.442, learning rate: 5.859375e-05
+>>> Epoch 206 Test Avg Loss: 2.110, Test Accuracy: 25.379, learning rate: 5.859375e-05
+>>> Epoch 207 Test Avg Loss: 2.070, Test Accuracy: 25.939, learning rate: 5.859375e-05
+>>> Epoch 208 Test Avg Loss: 2.068, Test Accuracy: 25.664, learning rate: 5.859375e-05
+>>> Epoch 209 Test Avg Loss: 2.036, Test Accuracy: 25.991, learning rate: 5.859375e-05
+>>> Epoch 210 Test Avg Loss: 2.027, Test Accuracy: 25.756, learning rate: 5.859375e-05
+>>> Epoch 211 Test Avg Loss: 2.018, Test Accuracy: 26.234, learning rate: 5.859375e-05
+>>> Epoch 212 Test Avg Loss: 2.015, Test Accuracy: 26.154, learning rate: 5.859375e-05
+>>> Epoch 213 Test Avg Loss: 1.988, Test Accuracy: 26.680, learning rate: 5.859375e-05
+>>> Epoch 214 Test Avg Loss: 2.015, Test Accuracy: 26.235, learning rate: 5.859375e-05
+>>> Epoch 215 Test Avg Loss: 1.998, Test Accuracy: 26.427, learning rate: 5.859375e-05
+>>> Epoch 216 Test Avg Loss: 1.985, Test Accuracy: 27.091, learning rate: 5.859375e-05
+>>> Epoch 217 Test Avg Loss: 1.991, Test Accuracy: 27.044, learning rate: 5.859375e-05
+Epoch   217: reducing learning rate of group 0 to 2.9297e-05.
+>>> Epoch 218 Test Avg Loss: 1.995, Test Accuracy: 26.985, learning rate: 2.9296875e-05
+>>> Epoch 219 Test Avg Loss: 2.002, Test Accuracy: 26.773, learning rate: 2.9296875e-05
+>>> Epoch 220 Test Avg Loss: 1.997, Test Accuracy: 27.114, learning rate: 2.9296875e-05
+>>> Epoch 221 Test Avg Loss: 1.993, Test Accuracy: 26.929, learning rate: 2.9296875e-05
+>>> Epoch 222 Test Avg Loss: 2.002, Test Accuracy: 26.963, learning rate: 2.9296875e-05
+>>> Epoch 223 Test Avg Loss: 2.001, Test Accuracy: 27.071, learning rate: 2.9296875e-05
+>>> Epoch 224 Test Avg Loss: 1.990, Test Accuracy: 27.179, learning rate: 2.9296875e-05
+>>> Epoch 225 Test Avg Loss: 2.000, Test Accuracy: 27.150, learning rate: 2.9296875e-05
+>>> Epoch 226 Test Avg Loss: 2.002, Test Accuracy: 27.095, learning rate: 2.9296875e-05
+>>> Epoch 227 Test Avg Loss: 2.005, Test Accuracy: 26.942, learning rate: 2.9296875e-05
+>>> Epoch 228 Test Avg Loss: 2.015, Test Accuracy: 26.606, learning rate: 2.9296875e-05
+>>> Epoch 229 Test Avg Loss: 2.010, Test Accuracy: 26.358, learning rate: 2.9296875e-05
+>>> Epoch 230 Test Avg Loss: 2.022, Test Accuracy: 26.381, learning rate: 2.9296875e-05
+>>> Epoch 231 Test Avg Loss: 2.009, Test Accuracy: 26.743, learning rate: 2.9296875e-05
+>>> Epoch 232 Test Avg Loss: 2.020, Test Accuracy: 26.366, learning rate: 2.9296875e-05
+Epoch   232: reducing learning rate of group 0 to 1.4648e-05.
+>>> Epoch 233 Test Avg Loss: 2.016, Test Accuracy: 26.402, learning rate: 1.46484375e-05
+>>> Epoch 234 Test Avg Loss: 2.020, Test Accuracy: 26.423, learning rate: 1.46484375e-05
+>>> Epoch 235 Test Avg Loss: 2.018, Test Accuracy: 26.161, learning rate: 1.46484375e-05
+>>> Epoch 236 Test Avg Loss: 2.020, Test Accuracy: 26.342, learning rate: 1.46484375e-05
+>>> Epoch 237 Test Avg Loss: 2.018, Test Accuracy: 26.177, learning rate: 1.46484375e-05
+>>> Epoch 238 Test Avg Loss: 2.019, Test Accuracy: 26.016, learning rate: 1.46484375e-05
+>>> Epoch 239 Test Avg Loss: 2.026, Test Accuracy: 25.652, learning rate: 1.46484375e-05
+>>> Epoch 240 Test Avg Loss: 2.017, Test Accuracy: 26.109, learning rate: 1.46484375e-05
+>>> Epoch 241 Test Avg Loss: 2.018, Test Accuracy: 26.215, learning rate: 1.46484375e-05
+>>> Epoch 242 Test Avg Loss: 2.015, Test Accuracy: 25.844, learning rate: 1.46484375e-05
+>>> Epoch 243 Test Avg Loss: 2.014, Test Accuracy: 26.232, learning rate: 1.46484375e-05
+>>> Epoch 244 Test Avg Loss: 2.018, Test Accuracy: 25.763, learning rate: 1.46484375e-05
+>>> Epoch 245 Test Avg Loss: 2.011, Test Accuracy: 26.161, learning rate: 1.46484375e-05
+>>> Epoch 246 Test Avg Loss: 2.011, Test Accuracy: 26.057, learning rate: 1.46484375e-05
+>>> Epoch 247 Test Avg Loss: 2.016, Test Accuracy: 25.599, learning rate: 1.46484375e-05
+Epoch   247: reducing learning rate of group 0 to 7.3242e-06.
+>>> Epoch 248 Test Avg Loss: 2.014, Test Accuracy: 25.798, learning rate: 7.32421875e-06
+>>> Epoch 249 Test Avg Loss: 2.017, Test Accuracy: 25.567, learning rate: 7.32421875e-06
+>>> Epoch 250 Test Avg Loss: 2.019, Test Accuracy: 25.554, learning rate: 7.32421875e-06
+>>> Epoch 251 Test Avg Loss: 2.014, Test Accuracy: 25.866, learning rate: 7.32421875e-06
+>>> Epoch 252 Test Avg Loss: 2.017, Test Accuracy: 25.826, learning rate: 7.32421875e-06
+>>> Epoch 253 Test Avg Loss: 2.015, Test Accuracy: 25.869, learning rate: 7.32421875e-06
+>>> Epoch 254 Test Avg Loss: 2.014, Test Accuracy: 25.936, learning rate: 7.32421875e-06
+>>> Epoch 255 Test Avg Loss: 2.012, Test Accuracy: 25.914, learning rate: 7.32421875e-06
+>>> Epoch 256 Test Avg Loss: 2.018, Test Accuracy: 25.672, learning rate: 7.32421875e-06
+>>> Epoch 257 Test Avg Loss: 2.019, Test Accuracy: 25.649, learning rate: 7.32421875e-06
+>>> Epoch 258 Test Avg Loss: 2.017, Test Accuracy: 25.656, learning rate: 7.32421875e-06
+>>> Epoch 259 Test Avg Loss: 2.019, Test Accuracy: 25.652, learning rate: 7.32421875e-06
+>>> Epoch 260 Test Avg Loss: 2.017, Test Accuracy: 25.838, learning rate: 7.32421875e-06
+>>> Epoch 261 Test Avg Loss: 2.018, Test Accuracy: 25.711, learning rate: 7.32421875e-06
+>>> Epoch 262 Test Avg Loss: 2.018, Test Accuracy: 25.663, learning rate: 7.32421875e-06
+Epoch   262: reducing learning rate of group 0 to 3.6621e-06.
+>>> Epoch 263 Test Avg Loss: 2.022, Test Accuracy: 25.370, learning rate: 3.662109375e-06
+>>> Epoch 264 Test Avg Loss: 2.021, Test Accuracy: 25.452, learning rate: 3.662109375e-06
+>>> Epoch 265 Test Avg Loss: 2.021, Test Accuracy: 25.393, learning rate: 3.662109375e-06
+>>> Epoch 266 Test Avg Loss: 2.021, Test Accuracy: 25.471, learning rate: 3.662109375e-06
+>>> Epoch 267 Test Avg Loss: 2.021, Test Accuracy: 25.640, learning rate: 3.662109375e-06
+>>> Epoch 268 Test Avg Loss: 2.023, Test Accuracy: 25.392, learning rate: 3.662109375e-06
+>>> Epoch 269 Test Avg Loss: 2.022, Test Accuracy: 25.472, learning rate: 3.662109375e-06
+>>> Epoch 270 Test Avg Loss: 2.025, Test Accuracy: 25.327, learning rate: 3.662109375e-06
+>>> Epoch 271 Test Avg Loss: 2.022, Test Accuracy: 25.458, learning rate: 3.662109375e-06
+>>> Epoch 272 Test Avg Loss: 2.020, Test Accuracy: 25.555, learning rate: 3.662109375e-06
+>>> Epoch 273 Test Avg Loss: 2.025, Test Accuracy: 25.198, learning rate: 3.662109375e-06
+>>> Epoch 274 Test Avg Loss: 2.022, Test Accuracy: 25.379, learning rate: 3.662109375e-06
+>>> Epoch 275 Test Avg Loss: 2.026, Test Accuracy: 25.168, learning rate: 3.662109375e-06
+>>> Epoch 276 Test Avg Loss: 2.022, Test Accuracy: 25.494, learning rate: 3.662109375e-06
+>>> Epoch 277 Test Avg Loss: 2.024, Test Accuracy: 25.259, learning rate: 3.662109375e-06
+Epoch   277: reducing learning rate of group 0 to 1.8311e-06.
+>>> Epoch 278 Test Avg Loss: 2.021, Test Accuracy: 25.360, learning rate: 1.8310546875e-06
+>>> Epoch 279 Test Avg Loss: 2.023, Test Accuracy: 25.331, learning rate: 1.8310546875e-06
+>>> Epoch 280 Test Avg Loss: 2.024, Test Accuracy: 25.201, learning rate: 1.8310546875e-06
+>>> Epoch 281 Test Avg Loss: 2.027, Test Accuracy: 25.094, learning rate: 1.8310546875e-06
+>>> Epoch 282 Test Avg Loss: 2.024, Test Accuracy: 25.308, learning rate: 1.8310546875e-06
+>>> Epoch 283 Test Avg Loss: 2.024, Test Accuracy: 25.149, learning rate: 1.8310546875e-06
+>>> Epoch 284 Test Avg Loss: 2.024, Test Accuracy: 25.145, learning rate: 1.8310546875e-06
+>>> Epoch 285 Test Avg Loss: 2.026, Test Accuracy: 25.015, learning rate: 1.8310546875e-06
+>>> Epoch 286 Test Avg Loss: 2.026, Test Accuracy: 25.058, learning rate: 1.8310546875e-06
+>>> Epoch 287 Test Avg Loss: 2.026, Test Accuracy: 25.108, learning rate: 1.8310546875e-06
+>>> Epoch 288 Test Avg Loss: 2.022, Test Accuracy: 25.257, learning rate: 1.8310546875e-06
+>>> Epoch 289 Test Avg Loss: 2.024, Test Accuracy: 25.259, learning rate: 1.8310546875e-06
+>>> Epoch 290 Test Avg Loss: 2.025, Test Accuracy: 25.058, learning rate: 1.8310546875e-06
+>>> Epoch 291 Test Avg Loss: 2.020, Test Accuracy: 25.380, learning rate: 1.8310546875e-06
+>>> Epoch 292 Test Avg Loss: 2.027, Test Accuracy: 24.957, learning rate: 1.8310546875e-06
+Epoch   292: reducing learning rate of group 0 to 9.1553e-07.
+>>> Epoch 293 Test Avg Loss: 2.023, Test Accuracy: 25.189, learning rate: 9.1552734375e-07
+>>> Epoch 294 Test Avg Loss: 2.025, Test Accuracy: 25.104, learning rate: 9.1552734375e-07
+>>> Epoch 295 Test Avg Loss: 2.025, Test Accuracy: 25.120, learning rate: 9.1552734375e-07
+>>> Epoch 296 Test Avg Loss: 2.025, Test Accuracy: 25.100, learning rate: 9.1552734375e-07
+>>> Epoch 297 Test Avg Loss: 2.026, Test Accuracy: 25.019, learning rate: 9.1552734375e-07
+>>> Epoch 298 Test Avg Loss: 2.023, Test Accuracy: 25.224, learning rate: 9.1552734375e-07
+>>> Epoch 299 Test Avg Loss: 2.026, Test Accuracy: 25.094, learning rate: 9.1552734375e-07
+>>> Epoch 300 Test Avg Loss: 2.026, Test Accuracy: 25.104, learning rate: 9.1552734375e-07
+Done ##############################################
+>>> using 56 workers
+Downloading https://www.cs.toronto.edu/~kriz/cifar-100-python.tar.gz to ./data/cifar-100-python.tar.gz
+Extracting ./data/cifar-100-python.tar.gz to ./data/
+Namespace(alpha=1.0, beta1=0.9, beta2=0.999, datapath='./data/', dataset='cifar100', epochs=300, expand_labels=False, factor=0.5, log_dir='./runs', lr=0.03, min_lr=1e-07, model_depth=28, model_dir='./saved_models', model_width=2, momentum=0.9, multiplier=3, num_classes=100, num_labeled=2500, num_workers=56, patience=10, test_batch=1024, threshold=0.95, train_batch=1024, vat_eps=8.0, vat_iter=4, vat_xi=8.0, wandb=False, warmup_epochs=35, wd=5e-05)
+>>> Warmup Training
+>>> Epoch 1 Train Avg Loss: 4.803, Train Accuracy: 0.651
+>>> Epoch 1 Test Avg Loss: 905524314112.000, Test Accuracy: 1.003, learning rate: 0.03
+>>> Epoch 2 Train Avg Loss: 4.687, Train Accuracy: 1.788
+>>> Epoch 2 Test Avg Loss: 19398199.200, Test Accuracy: 1.000, learning rate: 0.03
+>>> Epoch 3 Train Avg Loss: 4.568, Train Accuracy: 1.476
+>>> Epoch 3 Test Avg Loss: 185954.917, Test Accuracy: 1.012, learning rate: 0.03
+>>> Epoch 4 Train Avg Loss: 4.527, Train Accuracy: 1.541
+>>> Epoch 4 Test Avg Loss: 16579.127, Test Accuracy: 0.992, learning rate: 0.03
+>>> Epoch 5 Train Avg Loss: 4.463, Train Accuracy: 1.983
+>>> Epoch 5 Test Avg Loss: 1331.908, Test Accuracy: 1.022, learning rate: 0.03
+>>> Epoch 6 Train Avg Loss: 4.442, Train Accuracy: 2.929
+>>> Epoch 6 Test Avg Loss: 1450.787, Test Accuracy: 1.052, learning rate: 0.03
+>>> Epoch 7 Train Avg Loss: 4.404, Train Accuracy: 2.504
+>>> Epoch 7 Test Avg Loss: 466.309, Test Accuracy: 1.208, learning rate: 0.03
+>>> Epoch 8 Train Avg Loss: 4.383, Train Accuracy: 2.749
+>>> Epoch 8 Test Avg Loss: 152.508, Test Accuracy: 1.578, learning rate: 0.03
+>>> Epoch 9 Train Avg Loss: 4.360, Train Accuracy: 2.936
+>>> Epoch 9 Test Avg Loss: 51.647, Test Accuracy: 1.860, learning rate: 0.03
+>>> Epoch 10 Train Avg Loss: 4.336, Train Accuracy: 3.116
+>>> Epoch 10 Test Avg Loss: 16.699, Test Accuracy: 2.123, learning rate: 0.03
+>>> Epoch 11 Train Avg Loss: 4.289, Train Accuracy: 3.320
+>>> Epoch 11 Test Avg Loss: 9.894, Test Accuracy: 1.845, learning rate: 0.03
+>>> Epoch 12 Train Avg Loss: 4.280, Train Accuracy: 3.597
+>>> Epoch 12 Test Avg Loss: 9.553, Test Accuracy: 1.802, learning rate: 0.03
+>>> Epoch 13 Train Avg Loss: 4.300, Train Accuracy: 3.277
+>>> Epoch 13 Test Avg Loss: 8.554, Test Accuracy: 2.277, learning rate: 0.03
+>>> Epoch 14 Train Avg Loss: 4.269, Train Accuracy: 3.695
+>>> Epoch 14 Test Avg Loss: 7.277, Test Accuracy: 2.394, learning rate: 0.03
+>>> Epoch 15 Train Avg Loss: 4.217, Train Accuracy: 4.096
+>>> Epoch 15 Test Avg Loss: 6.335, Test Accuracy: 2.536, learning rate: 0.03
+>>> Epoch 16 Train Avg Loss: 4.209, Train Accuracy: 4.329
+>>> Epoch 16 Test Avg Loss: 5.350, Test Accuracy: 2.897, learning rate: 0.03
+>>> Epoch 17 Train Avg Loss: 4.161, Train Accuracy: 4.552
+>>> Epoch 17 Test Avg Loss: 5.572, Test Accuracy: 2.856, learning rate: 0.03
+>>> Epoch 18 Train Avg Loss: 4.157, Train Accuracy: 4.693
+>>> Epoch 18 Test Avg Loss: 4.999, Test Accuracy: 3.008, learning rate: 0.03
+>>> Epoch 19 Train Avg Loss: 4.136, Train Accuracy: 5.032
+>>> Epoch 19 Test Avg Loss: 4.841, Test Accuracy: 3.342, learning rate: 0.03
+>>> Epoch 20 Train Avg Loss: 4.120, Train Accuracy: 5.062
+>>> Epoch 20 Test Avg Loss: 4.633, Test Accuracy: 3.665, learning rate: 0.03
+>>> Epoch 21 Train Avg Loss: 4.106, Train Accuracy: 4.769
+>>> Epoch 21 Test Avg Loss: 4.469, Test Accuracy: 3.941, learning rate: 0.03
+>>> Epoch 22 Train Avg Loss: 4.041, Train Accuracy: 6.249
+>>> Epoch 22 Test Avg Loss: 4.348, Test Accuracy: 4.863, learning rate: 0.03
+>>> Epoch 23 Train Avg Loss: 4.040, Train Accuracy: 6.861
+>>> Epoch 23 Test Avg Loss: 4.401, Test Accuracy: 4.734, learning rate: 0.03
+>>> Epoch 24 Train Avg Loss: 3.974, Train Accuracy: 7.529
+>>> Epoch 24 Test Avg Loss: 4.366, Test Accuracy: 4.534, learning rate: 0.03
+>>> Epoch 25 Train Avg Loss: 3.957, Train Accuracy: 7.505
+>>> Epoch 25 Test Avg Loss: 4.219, Test Accuracy: 5.537, learning rate: 0.03
+>>> Epoch 26 Train Avg Loss: 3.916, Train Accuracy: 7.490
+>>> Epoch 26 Test Avg Loss: 4.219, Test Accuracy: 5.651, learning rate: 0.03
+>>> Epoch 27 Train Avg Loss: 3.938, Train Accuracy: 8.000
+>>> Epoch 27 Test Avg Loss: 4.329, Test Accuracy: 4.653, learning rate: 0.03
+>>> Epoch 28 Train Avg Loss: 3.893, Train Accuracy: 7.904
+>>> Epoch 28 Test Avg Loss: 4.195, Test Accuracy: 5.711, learning rate: 0.03
+>>> Epoch 29 Train Avg Loss: 3.870, Train Accuracy: 8.417
+>>> Epoch 29 Test Avg Loss: 4.161, Test Accuracy: 6.452, learning rate: 0.03
+>>> Epoch 30 Train Avg Loss: 3.845, Train Accuracy: 8.742
+>>> Epoch 30 Test Avg Loss: 4.143, Test Accuracy: 5.987, learning rate: 0.03
+>>> Epoch 31 Train Avg Loss: 3.819, Train Accuracy: 8.653
+>>> Epoch 31 Test Avg Loss: 4.121, Test Accuracy: 6.550, learning rate: 0.03
+>>> Epoch 32 Train Avg Loss: 3.758, Train Accuracy: 9.662
+>>> Epoch 32 Test Avg Loss: 4.236, Test Accuracy: 5.139, learning rate: 0.03
+>>> Epoch 33 Train Avg Loss: 3.740, Train Accuracy: 9.658
+>>> Epoch 33 Test Avg Loss: 4.192, Test Accuracy: 6.387, learning rate: 0.03
+>>> Epoch 34 Train Avg Loss: 3.720, Train Accuracy: 9.840
+>>> Epoch 34 Test Avg Loss: 4.378, Test Accuracy: 6.080, learning rate: 0.03
+>>> Epoch 35 Train Avg Loss: 3.707, Train Accuracy: 10.960
+>>> Epoch 35 Test Avg Loss: 4.294, Test Accuracy: 5.466, learning rate: 0.03
+>>> Loading Best Model-val_loss: 4.121
+Model loaded from epoch 31
+>>> VAT Training
+>>> Epoch 36 Test Avg Loss: 4.577, Test Accuracy: 2.599, learning rate: 0.03
+>>> Epoch 37 Test Avg Loss: 4.454, Test Accuracy: 3.013, learning rate: 0.03
+>>> Epoch 38 Test Avg Loss: 4.337, Test Accuracy: 4.378, learning rate: 0.03
+>>> Epoch 39 Test Avg Loss: 4.241, Test Accuracy: 5.013, learning rate: 0.03
+>>> Epoch 40 Test Avg Loss: 4.118, Test Accuracy: 6.536, learning rate: 0.03
+>>> Epoch 41 Test Avg Loss: 4.215, Test Accuracy: 4.999, learning rate: 0.03
+>>> Epoch 42 Test Avg Loss: 4.135, Test Accuracy: 6.592, learning rate: 0.03
+>>> Epoch 43 Test Avg Loss: 4.088, Test Accuracy: 7.304, learning rate: 0.03
+>>> Epoch 44 Test Avg Loss: 4.085, Test Accuracy: 7.823, learning rate: 0.03
+>>> Epoch 45 Test Avg Loss: 4.234, Test Accuracy: 5.393, learning rate: 0.03
+>>> Epoch 46 Test Avg Loss: 4.246, Test Accuracy: 5.854, learning rate: 0.03
+>>> Epoch 47 Test Avg Loss: 4.226, Test Accuracy: 5.802, learning rate: 0.03
+>>> Epoch 48 Test Avg Loss: 4.118, Test Accuracy: 7.723, learning rate: 0.03
+>>> Epoch 49 Test Avg Loss: 4.150, Test Accuracy: 6.714, learning rate: 0.03
+>>> Epoch 50 Test Avg Loss: 4.017, Test Accuracy: 9.537, learning rate: 0.03
+>>> Epoch 51 Test Avg Loss: 4.068, Test Accuracy: 8.969, learning rate: 0.03
+>>> Epoch 52 Test Avg Loss: 3.927, Test Accuracy: 10.344, learning rate: 0.03
+>>> Epoch 53 Test Avg Loss: 3.900, Test Accuracy: 11.932, learning rate: 0.03
+>>> Epoch 54 Test Avg Loss: 4.008, Test Accuracy: 10.196, learning rate: 0.03
+>>> Epoch 55 Test Avg Loss: 3.912, Test Accuracy: 10.950, learning rate: 0.03
+>>> Epoch 56 Test Avg Loss: 4.077, Test Accuracy: 8.340, learning rate: 0.03
+>>> Epoch 57 Test Avg Loss: 3.942, Test Accuracy: 10.523, learning rate: 0.03
+>>> Epoch 58 Test Avg Loss: 3.922, Test Accuracy: 12.177, learning rate: 0.03
+>>> Epoch 59 Test Avg Loss: 3.940, Test Accuracy: 10.924, learning rate: 0.03
+>>> Epoch 60 Test Avg Loss: 3.882, Test Accuracy: 12.641, learning rate: 0.03
+>>> Epoch 61 Test Avg Loss: 3.942, Test Accuracy: 11.226, learning rate: 0.03
+>>> Epoch 62 Test Avg Loss: 3.902, Test Accuracy: 11.918, learning rate: 0.03
+>>> Epoch 63 Test Avg Loss: 3.912, Test Accuracy: 11.655, learning rate: 0.03
+>>> Epoch 64 Test Avg Loss: 3.904, Test Accuracy: 10.849, learning rate: 0.03
+>>> Epoch 65 Test Avg Loss: 3.898, Test Accuracy: 11.339, learning rate: 0.03
+>>> Epoch 66 Test Avg Loss: 3.947, Test Accuracy: 10.930, learning rate: 0.03
+>>> Epoch 67 Test Avg Loss: 3.906, Test Accuracy: 11.726, learning rate: 0.03
+>>> Epoch 68 Test Avg Loss: 3.973, Test Accuracy: 10.291, learning rate: 0.03
+>>> Epoch 69 Test Avg Loss: 3.926, Test Accuracy: 11.472, learning rate: 0.03
+>>> Epoch 70 Test Avg Loss: 3.922, Test Accuracy: 11.520, learning rate: 0.03
+>>> Epoch 71 Test Avg Loss: 3.898, Test Accuracy: 11.070, learning rate: 0.03
+Epoch    71: reducing learning rate of group 0 to 1.5000e-02.
+>>> Epoch 72 Test Avg Loss: 3.881, Test Accuracy: 11.792, learning rate: 0.015
+>>> Epoch 73 Test Avg Loss: 3.855, Test Accuracy: 12.640, learning rate: 0.015
+>>> Epoch 74 Test Avg Loss: 3.828, Test Accuracy: 13.721, learning rate: 0.015
+>>> Epoch 75 Test Avg Loss: 3.854, Test Accuracy: 12.695, learning rate: 0.015
+>>> Epoch 76 Test Avg Loss: 3.846, Test Accuracy: 13.185, learning rate: 0.015
+>>> Epoch 77 Test Avg Loss: 3.924, Test Accuracy: 10.598, learning rate: 0.015
+>>> Epoch 78 Test Avg Loss: 3.860, Test Accuracy: 13.230, learning rate: 0.015
+>>> Epoch 79 Test Avg Loss: 3.846, Test Accuracy: 12.772, learning rate: 0.015
+>>> Epoch 80 Test Avg Loss: 3.872, Test Accuracy: 12.383, learning rate: 0.015
+>>> Epoch 81 Test Avg Loss: 3.863, Test Accuracy: 12.580, learning rate: 0.015
+>>> Epoch 82 Test Avg Loss: 3.835, Test Accuracy: 13.180, learning rate: 0.015
+>>> Epoch 83 Test Avg Loss: 3.863, Test Accuracy: 12.573, learning rate: 0.015
+>>> Epoch 84 Test Avg Loss: 3.900, Test Accuracy: 11.110, learning rate: 0.015
+>>> Epoch 85 Test Avg Loss: 3.862, Test Accuracy: 12.898, learning rate: 0.015
+>>> Epoch 86 Test Avg Loss: 3.845, Test Accuracy: 12.879, learning rate: 0.015
+Epoch    86: reducing learning rate of group 0 to 7.5000e-03.
+>>> Epoch 87 Test Avg Loss: 3.807, Test Accuracy: 14.274, learning rate: 0.0075
+>>> Epoch 88 Test Avg Loss: 3.791, Test Accuracy: 13.959, learning rate: 0.0075
+>>> Epoch 89 Test Avg Loss: 3.812, Test Accuracy: 13.829, learning rate: 0.0075
+>>> Epoch 90 Test Avg Loss: 3.792, Test Accuracy: 14.270, learning rate: 0.0075
+>>> Epoch 91 Test Avg Loss: 3.795, Test Accuracy: 14.099, learning rate: 0.0075
+>>> Epoch 92 Test Avg Loss: 3.800, Test Accuracy: 14.273, learning rate: 0.0075
+>>> Epoch 93 Test Avg Loss: 3.814, Test Accuracy: 13.961, learning rate: 0.0075
+>>> Epoch 94 Test Avg Loss: 3.824, Test Accuracy: 13.393, learning rate: 0.0075
+>>> Epoch 95 Test Avg Loss: 3.811, Test Accuracy: 13.173, learning rate: 0.0075
+>>> Epoch 96 Test Avg Loss: 3.792, Test Accuracy: 14.318, learning rate: 0.0075
+>>> Epoch 97 Test Avg Loss: 3.798, Test Accuracy: 14.108, learning rate: 0.0075
+>>> Epoch 98 Test Avg Loss: 3.783, Test Accuracy: 13.628, learning rate: 0.0075
+>>> Epoch 99 Test Avg Loss: 3.802, Test Accuracy: 13.923, learning rate: 0.0075
+>>> Epoch 100 Test Avg Loss: 3.812, Test Accuracy: 14.120, learning rate: 0.0075
+>>> Epoch 101 Test Avg Loss: 3.790, Test Accuracy: 14.514, learning rate: 0.0075
+>>> Epoch 102 Test Avg Loss: 3.803, Test Accuracy: 14.423, learning rate: 0.0075
+>>> Epoch 103 Test Avg Loss: 3.803, Test Accuracy: 13.871, learning rate: 0.0075
+>>> Epoch 104 Test Avg Loss: 3.794, Test Accuracy: 13.942, learning rate: 0.0075
+>>> Epoch 105 Test Avg Loss: 3.790, Test Accuracy: 14.282, learning rate: 0.0075
+>>> Epoch 106 Test Avg Loss: 3.802, Test Accuracy: 14.342, learning rate: 0.0075
+>>> Epoch 107 Test Avg Loss: 3.782, Test Accuracy: 14.260, learning rate: 0.0075
+>>> Epoch 108 Test Avg Loss: 3.802, Test Accuracy: 13.958, learning rate: 0.0075
+>>> Epoch 109 Test Avg Loss: 3.797, Test Accuracy: 14.662, learning rate: 0.0075
+>>> Epoch 110 Test Avg Loss: 3.805, Test Accuracy: 14.145, learning rate: 0.0075
+>>> Epoch 111 Test Avg Loss: 3.825, Test Accuracy: 13.521, learning rate: 0.0075
+>>> Epoch 112 Test Avg Loss: 3.807, Test Accuracy: 13.537, learning rate: 0.0075
+>>> Epoch 113 Test Avg Loss: 3.813, Test Accuracy: 13.858, learning rate: 0.0075
+>>> Epoch 114 Test Avg Loss: 3.803, Test Accuracy: 13.923, learning rate: 0.0075
+>>> Epoch 115 Test Avg Loss: 3.815, Test Accuracy: 13.778, learning rate: 0.0075
+>>> Epoch 116 Test Avg Loss: 3.782, Test Accuracy: 15.108, learning rate: 0.0075
+>>> Epoch 117 Test Avg Loss: 3.795, Test Accuracy: 14.556, learning rate: 0.0075
+>>> Epoch 118 Test Avg Loss: 3.791, Test Accuracy: 14.271, learning rate: 0.0075
+Epoch   118: reducing learning rate of group 0 to 3.7500e-03.
+>>> Epoch 119 Test Avg Loss: 3.779, Test Accuracy: 14.963, learning rate: 0.00375
+>>> Epoch 120 Test Avg Loss: 3.773, Test Accuracy: 14.945, learning rate: 0.00375
+>>> Epoch 121 Test Avg Loss: 3.762, Test Accuracy: 15.684, learning rate: 0.00375
+>>> Epoch 122 Test Avg Loss: 3.775, Test Accuracy: 14.960, learning rate: 0.00375
+>>> Epoch 123 Test Avg Loss: 3.766, Test Accuracy: 15.159, learning rate: 0.00375
+>>> Epoch 124 Test Avg Loss: 3.768, Test Accuracy: 14.852, learning rate: 0.00375
+>>> Epoch 125 Test Avg Loss: 3.757, Test Accuracy: 15.156, learning rate: 0.00375
+>>> Epoch 126 Test Avg Loss: 3.766, Test Accuracy: 15.002, learning rate: 0.00375
+>>> Epoch 127 Test Avg Loss: 3.774, Test Accuracy: 14.915, learning rate: 0.00375
+>>> Epoch 128 Test Avg Loss: 3.765, Test Accuracy: 14.986, learning rate: 0.00375
+>>> Epoch 129 Test Avg Loss: 3.763, Test Accuracy: 15.091, learning rate: 0.00375
+>>> Epoch 130 Test Avg Loss: 3.759, Test Accuracy: 15.546, learning rate: 0.00375
+>>> Epoch 131 Test Avg Loss: 3.772, Test Accuracy: 15.379, learning rate: 0.00375
+>>> Epoch 132 Test Avg Loss: 3.768, Test Accuracy: 14.964, learning rate: 0.00375
+>>> Epoch 133 Test Avg Loss: 3.779, Test Accuracy: 14.787, learning rate: 0.00375
+>>> Epoch 134 Test Avg Loss: 3.756, Test Accuracy: 15.267, learning rate: 0.00375
+>>> Epoch 135 Test Avg Loss: 3.755, Test Accuracy: 15.009, learning rate: 0.00375
+>>> Epoch 136 Test Avg Loss: 3.771, Test Accuracy: 14.939, learning rate: 0.00375
+>>> Epoch 137 Test Avg Loss: 3.764, Test Accuracy: 15.056, learning rate: 0.00375
+>>> Epoch 138 Test Avg Loss: 3.758, Test Accuracy: 15.367, learning rate: 0.00375
+>>> Epoch 139 Test Avg Loss: 3.756, Test Accuracy: 15.460, learning rate: 0.00375
+>>> Epoch 140 Test Avg Loss: 3.767, Test Accuracy: 15.245, learning rate: 0.00375
+>>> Epoch 141 Test Avg Loss: 3.754, Test Accuracy: 15.386, learning rate: 0.00375
+>>> Epoch 142 Test Avg Loss: 3.770, Test Accuracy: 15.464, learning rate: 0.00375
+>>> Epoch 143 Test Avg Loss: 3.780, Test Accuracy: 14.734, learning rate: 0.00375
+>>> Epoch 144 Test Avg Loss: 3.752, Test Accuracy: 15.743, learning rate: 0.00375
+>>> Epoch 145 Test Avg Loss: 3.760, Test Accuracy: 15.297, learning rate: 0.00375
+>>> Epoch 146 Test Avg Loss: 3.747, Test Accuracy: 15.870, learning rate: 0.00375
+>>> Epoch 147 Test Avg Loss: 3.761, Test Accuracy: 15.482, learning rate: 0.00375
+>>> Epoch 148 Test Avg Loss: 3.738, Test Accuracy: 15.658, learning rate: 0.00375
+>>> Epoch 149 Test Avg Loss: 3.743, Test Accuracy: 15.805, learning rate: 0.00375
+>>> Epoch 150 Test Avg Loss: 3.758, Test Accuracy: 15.772, learning rate: 0.00375
+>>> Epoch 151 Test Avg Loss: 3.728, Test Accuracy: 16.134, learning rate: 0.00375
+>>> Epoch 152 Test Avg Loss: 3.735, Test Accuracy: 15.978, learning rate: 0.00375
+>>> Epoch 153 Test Avg Loss: 3.768, Test Accuracy: 14.987, learning rate: 0.00375
+>>> Epoch 154 Test Avg Loss: 3.746, Test Accuracy: 15.559, learning rate: 0.00375
+>>> Epoch 155 Test Avg Loss: 3.751, Test Accuracy: 15.375, learning rate: 0.00375
+>>> Epoch 156 Test Avg Loss: 3.759, Test Accuracy: 15.259, learning rate: 0.00375
+>>> Epoch 157 Test Avg Loss: 3.742, Test Accuracy: 15.178, learning rate: 0.00375
+>>> Epoch 158 Test Avg Loss: 3.746, Test Accuracy: 15.739, learning rate: 0.00375
+>>> Epoch 159 Test Avg Loss: 3.737, Test Accuracy: 15.956, learning rate: 0.00375
+>>> Epoch 160 Test Avg Loss: 3.752, Test Accuracy: 15.716, learning rate: 0.00375
+>>> Epoch 161 Test Avg Loss: 3.747, Test Accuracy: 15.727, learning rate: 0.00375
+>>> Epoch 162 Test Avg Loss: 3.741, Test Accuracy: 15.505, learning rate: 0.00375
+Epoch   162: reducing learning rate of group 0 to 1.8750e-03.
+>>> Epoch 163 Test Avg Loss: 3.727, Test Accuracy: 16.139, learning rate: 0.001875
+>>> Epoch 164 Test Avg Loss: 3.729, Test Accuracy: 15.770, learning rate: 0.001875
+>>> Epoch 165 Test Avg Loss: 3.723, Test Accuracy: 16.087, learning rate: 0.001875
+>>> Epoch 166 Test Avg Loss: 3.725, Test Accuracy: 16.146, learning rate: 0.001875
+>>> Epoch 167 Test Avg Loss: 3.728, Test Accuracy: 15.633, learning rate: 0.001875
+>>> Epoch 168 Test Avg Loss: 3.730, Test Accuracy: 16.122, learning rate: 0.001875
+>>> Epoch 169 Test Avg Loss: 3.737, Test Accuracy: 15.652, learning rate: 0.001875
+>>> Epoch 170 Test Avg Loss: 3.733, Test Accuracy: 15.799, learning rate: 0.001875
+>>> Epoch 171 Test Avg Loss: 3.733, Test Accuracy: 15.911, learning rate: 0.001875
+>>> Epoch 172 Test Avg Loss: 3.732, Test Accuracy: 15.410, learning rate: 0.001875
+>>> Epoch 173 Test Avg Loss: 3.725, Test Accuracy: 16.053, learning rate: 0.001875
+>>> Epoch 174 Test Avg Loss: 3.732, Test Accuracy: 15.735, learning rate: 0.001875
+>>> Epoch 175 Test Avg Loss: 3.726, Test Accuracy: 16.398, learning rate: 0.001875
+>>> Epoch 176 Test Avg Loss: 3.730, Test Accuracy: 15.911, learning rate: 0.001875
+>>> Epoch 177 Test Avg Loss: 3.728, Test Accuracy: 15.929, learning rate: 0.001875
+Epoch   177: reducing learning rate of group 0 to 9.3750e-04.
+>>> Epoch 178 Test Avg Loss: 3.717, Test Accuracy: 16.276, learning rate: 0.0009375
+>>> Epoch 179 Test Avg Loss: 3.719, Test Accuracy: 16.223, learning rate: 0.0009375
+>>> Epoch 180 Test Avg Loss: 3.729, Test Accuracy: 16.216, learning rate: 0.0009375
+>>> Epoch 181 Test Avg Loss: 3.721, Test Accuracy: 16.307, learning rate: 0.0009375
+>>> Epoch 182 Test Avg Loss: 3.719, Test Accuracy: 16.165, learning rate: 0.0009375
+>>> Epoch 183 Test Avg Loss: 3.715, Test Accuracy: 16.231, learning rate: 0.0009375
+>>> Epoch 184 Test Avg Loss: 3.720, Test Accuracy: 16.023, learning rate: 0.0009375
+>>> Epoch 185 Test Avg Loss: 3.719, Test Accuracy: 16.163, learning rate: 0.0009375
+>>> Epoch 186 Test Avg Loss: 3.725, Test Accuracy: 15.768, learning rate: 0.0009375
+>>> Epoch 187 Test Avg Loss: 3.720, Test Accuracy: 16.005, learning rate: 0.0009375
+>>> Epoch 188 Test Avg Loss: 3.721, Test Accuracy: 16.201, learning rate: 0.0009375
+>>> Epoch 189 Test Avg Loss: 3.718, Test Accuracy: 15.924, learning rate: 0.0009375
+>>> Epoch 190 Test Avg Loss: 3.721, Test Accuracy: 15.938, learning rate: 0.0009375
+>>> Epoch 191 Test Avg Loss: 3.726, Test Accuracy: 16.063, learning rate: 0.0009375
+>>> Epoch 192 Test Avg Loss: 3.728, Test Accuracy: 16.145, learning rate: 0.0009375
+>>> Epoch 193 Test Avg Loss: 3.724, Test Accuracy: 15.933, learning rate: 0.0009375
+>>> Epoch 194 Test Avg Loss: 3.725, Test Accuracy: 16.264, learning rate: 0.0009375
+Epoch   194: reducing learning rate of group 0 to 4.6875e-04.
+>>> Epoch 195 Test Avg Loss: 3.726, Test Accuracy: 16.093, learning rate: 0.00046875
+>>> Epoch 196 Test Avg Loss: 3.720, Test Accuracy: 15.960, learning rate: 0.00046875
+>>> Epoch 197 Test Avg Loss: 3.719, Test Accuracy: 16.112, learning rate: 0.00046875
+>>> Epoch 198 Test Avg Loss: 3.725, Test Accuracy: 16.131, learning rate: 0.00046875
+>>> Epoch 199 Test Avg Loss: 3.721, Test Accuracy: 16.092, learning rate: 0.00046875
+>>> Epoch 200 Test Avg Loss: 3.718, Test Accuracy: 16.034, learning rate: 0.00046875
+>>> Epoch 201 Test Avg Loss: 3.720, Test Accuracy: 15.988, learning rate: 0.00046875
+>>> Epoch 202 Test Avg Loss: 3.723, Test Accuracy: 15.897, learning rate: 0.00046875
+>>> Epoch 203 Test Avg Loss: 3.721, Test Accuracy: 16.199, learning rate: 0.00046875
+>>> Epoch 204 Test Avg Loss: 3.721, Test Accuracy: 16.335, learning rate: 0.00046875
+>>> Epoch 205 Test Avg Loss: 3.718, Test Accuracy: 16.319, learning rate: 0.00046875
+>>> Epoch 206 Test Avg Loss: 3.717, Test Accuracy: 16.105, learning rate: 0.00046875
+>>> Epoch 207 Test Avg Loss: 3.720, Test Accuracy: 16.014, learning rate: 0.00046875
+>>> Epoch 208 Test Avg Loss: 3.716, Test Accuracy: 16.388, learning rate: 0.00046875
+>>> Epoch 209 Test Avg Loss: 3.716, Test Accuracy: 16.333, learning rate: 0.00046875
+Epoch   209: reducing learning rate of group 0 to 2.3437e-04.
+>>> Epoch 210 Test Avg Loss: 3.712, Test Accuracy: 16.313, learning rate: 0.000234375
+>>> Epoch 211 Test Avg Loss: 3.710, Test Accuracy: 16.546, learning rate: 0.000234375
+>>> Epoch 212 Test Avg Loss: 3.713, Test Accuracy: 16.614, learning rate: 0.000234375
+>>> Epoch 213 Test Avg Loss: 3.716, Test Accuracy: 16.368, learning rate: 0.000234375
+>>> Epoch 214 Test Avg Loss: 3.713, Test Accuracy: 16.472, learning rate: 0.000234375
+>>> Epoch 215 Test Avg Loss: 3.736, Test Accuracy: 16.458, learning rate: 0.000234375
+>>> Epoch 216 Test Avg Loss: 3.757, Test Accuracy: 16.176, learning rate: 0.000234375
+>>> Epoch 217 Test Avg Loss: 3.757, Test Accuracy: 16.159, learning rate: 0.000234375
+>>> Epoch 218 Test Avg Loss: 3.819, Test Accuracy: 15.829, learning rate: 0.000234375
+>>> Epoch 219 Test Avg Loss: 3.869, Test Accuracy: 15.599, learning rate: 0.000234375
+>>> Epoch 220 Test Avg Loss: 3.779, Test Accuracy: 15.725, learning rate: 0.000234375
+>>> Epoch 221 Test Avg Loss: 3.820, Test Accuracy: 15.585, learning rate: 0.000234375
+>>> Epoch 222 Test Avg Loss: 4.201, Test Accuracy: 15.150, learning rate: 0.000234375
+>>> Epoch 223 Test Avg Loss: 4.467, Test Accuracy: 15.515, learning rate: 0.000234375
+>>> Epoch 224 Test Avg Loss: 4.270, Test Accuracy: 15.576, learning rate: 0.000234375
+Epoch   224: reducing learning rate of group 0 to 1.1719e-04.
+>>> Epoch 225 Test Avg Loss: 5.547, Test Accuracy: 15.139, learning rate: 0.0001171875
+>>> Epoch 226 Test Avg Loss: 5.051, Test Accuracy: 15.230, learning rate: 0.0001171875
+>>> Epoch 227 Test Avg Loss: 4.962, Test Accuracy: 15.111, learning rate: 0.0001171875
+>>> Epoch 228 Test Avg Loss: 5.691, Test Accuracy: 15.120, learning rate: 0.0001171875
+>>> Epoch 229 Test Avg Loss: 5.993, Test Accuracy: 14.822, learning rate: 0.0001171875
+>>> Epoch 230 Test Avg Loss: 6.092, Test Accuracy: 14.928, learning rate: 0.0001171875
+>>> Epoch 231 Test Avg Loss: 5.917, Test Accuracy: 14.751, learning rate: 0.0001171875
+>>> Epoch 232 Test Avg Loss: 6.580, Test Accuracy: 14.663, learning rate: 0.0001171875
+>>> Epoch 233 Test Avg Loss: 7.148, Test Accuracy: 14.258, learning rate: 0.0001171875
+>>> Epoch 234 Test Avg Loss: 7.295, Test Accuracy: 14.476, learning rate: 0.0001171875
+>>> Epoch 235 Test Avg Loss: 6.716, Test Accuracy: 14.435, learning rate: 0.0001171875
+>>> Epoch 236 Test Avg Loss: 7.229, Test Accuracy: 14.547, learning rate: 0.0001171875
+>>> Epoch 237 Test Avg Loss: 7.132, Test Accuracy: 14.275, learning rate: 0.0001171875
+>>> Epoch 238 Test Avg Loss: 7.612, Test Accuracy: 14.318, learning rate: 0.0001171875
+>>> Epoch 239 Test Avg Loss: 7.877, Test Accuracy: 14.199, learning rate: 0.0001171875
+Epoch   239: reducing learning rate of group 0 to 5.8594e-05.
+>>> Epoch 240 Test Avg Loss: 7.878, Test Accuracy: 14.183, learning rate: 5.859375e-05
+>>> Epoch 241 Test Avg Loss: 7.797, Test Accuracy: 14.277, learning rate: 5.859375e-05
+>>> Epoch 242 Test Avg Loss: 7.795, Test Accuracy: 14.196, learning rate: 5.859375e-05
+>>> Epoch 243 Test Avg Loss: 7.845, Test Accuracy: 14.315, learning rate: 5.859375e-05
+>>> Epoch 244 Test Avg Loss: 7.833, Test Accuracy: 14.244, learning rate: 5.859375e-05
+>>> Epoch 245 Test Avg Loss: 8.139, Test Accuracy: 14.008, learning rate: 5.859375e-05
+>>> Epoch 246 Test Avg Loss: 7.879, Test Accuracy: 14.105, learning rate: 5.859375e-05
+>>> Epoch 247 Test Avg Loss: 8.022, Test Accuracy: 14.057, learning rate: 5.859375e-05
+>>> Epoch 248 Test Avg Loss: 7.837, Test Accuracy: 14.126, learning rate: 5.859375e-05
+>>> Epoch 249 Test Avg Loss: 7.881, Test Accuracy: 13.972, learning rate: 5.859375e-05
+>>> Epoch 250 Test Avg Loss: 7.694, Test Accuracy: 14.167, learning rate: 5.859375e-05
+>>> Epoch 251 Test Avg Loss: 7.627, Test Accuracy: 14.063, learning rate: 5.859375e-05
+>>> Epoch 252 Test Avg Loss: 7.619, Test Accuracy: 14.134, learning rate: 5.859375e-05
+>>> Epoch 253 Test Avg Loss: 8.074, Test Accuracy: 13.971, learning rate: 5.859375e-05
+>>> Epoch 254 Test Avg Loss: 7.997, Test Accuracy: 14.173, learning rate: 5.859375e-05
+Epoch   254: reducing learning rate of group 0 to 2.9297e-05.
+>>> Epoch 255 Test Avg Loss: 8.097, Test Accuracy: 14.073, learning rate: 2.9296875e-05
+>>> Epoch 256 Test Avg Loss: 8.351, Test Accuracy: 14.137, learning rate: 2.9296875e-05
+>>> Epoch 257 Test Avg Loss: 8.290, Test Accuracy: 14.095, learning rate: 2.9296875e-05
+>>> Epoch 258 Test Avg Loss: 8.091, Test Accuracy: 14.076, learning rate: 2.9296875e-05
+>>> Epoch 259 Test Avg Loss: 8.179, Test Accuracy: 14.224, learning rate: 2.9296875e-05
+>>> Epoch 260 Test Avg Loss: 8.177, Test Accuracy: 14.113, learning rate: 2.9296875e-05
+>>> Epoch 261 Test Avg Loss: 8.179, Test Accuracy: 14.103, learning rate: 2.9296875e-05
+>>> Epoch 262 Test Avg Loss: 8.033, Test Accuracy: 14.257, learning rate: 2.9296875e-05
+>>> Epoch 263 Test Avg Loss: 8.406, Test Accuracy: 14.221, learning rate: 2.9296875e-05
+>>> Epoch 264 Test Avg Loss: 8.246, Test Accuracy: 14.221, learning rate: 2.9296875e-05
+>>> Epoch 265 Test Avg Loss: 8.458, Test Accuracy: 14.227, learning rate: 2.9296875e-05
+>>> Epoch 266 Test Avg Loss: 8.255, Test Accuracy: 14.227, learning rate: 2.9296875e-05
+>>> Epoch 267 Test Avg Loss: 8.214, Test Accuracy: 14.308, learning rate: 2.9296875e-05
+>>> Epoch 268 Test Avg Loss: 8.117, Test Accuracy: 14.162, learning rate: 2.9296875e-05
+>>> Epoch 269 Test Avg Loss: 8.134, Test Accuracy: 14.207, learning rate: 2.9296875e-05
+Epoch   269: reducing learning rate of group 0 to 1.4648e-05.
+>>> Epoch 270 Test Avg Loss: 8.465, Test Accuracy: 14.203, learning rate: 1.46484375e-05
+>>> Epoch 271 Test Avg Loss: 8.570, Test Accuracy: 14.126, learning rate: 1.46484375e-05
+>>> Epoch 272 Test Avg Loss: 8.535, Test Accuracy: 14.100, learning rate: 1.46484375e-05
+>>> Epoch 273 Test Avg Loss: 8.622, Test Accuracy: 14.015, learning rate: 1.46484375e-05
+>>> Epoch 274 Test Avg Loss: 8.576, Test Accuracy: 14.041, learning rate: 1.46484375e-05
+>>> Epoch 275 Test Avg Loss: 8.613, Test Accuracy: 14.103, learning rate: 1.46484375e-05
+>>> Epoch 276 Test Avg Loss: 8.703, Test Accuracy: 14.041, learning rate: 1.46484375e-05
+>>> Epoch 277 Test Avg Loss: 8.608, Test Accuracy: 14.112, learning rate: 1.46484375e-05
+>>> Epoch 278 Test Avg Loss: 8.715, Test Accuracy: 13.976, learning rate: 1.46484375e-05
+>>> Epoch 279 Test Avg Loss: 8.679, Test Accuracy: 13.908, learning rate: 1.46484375e-05
+>>> Epoch 280 Test Avg Loss: 8.549, Test Accuracy: 14.048, learning rate: 1.46484375e-05
+>>> Epoch 281 Test Avg Loss: 8.687, Test Accuracy: 13.960, learning rate: 1.46484375e-05
+>>> Epoch 282 Test Avg Loss: 8.659, Test Accuracy: 13.970, learning rate: 1.46484375e-05
+>>> Epoch 283 Test Avg Loss: 8.667, Test Accuracy: 14.035, learning rate: 1.46484375e-05
+>>> Epoch 284 Test Avg Loss: 8.631, Test Accuracy: 14.058, learning rate: 1.46484375e-05
+Epoch   284: reducing learning rate of group 0 to 7.3242e-06.
+>>> Epoch 285 Test Avg Loss: 8.753, Test Accuracy: 13.996, learning rate: 7.32421875e-06
+>>> Epoch 286 Test Avg Loss: 8.713, Test Accuracy: 13.831, learning rate: 7.32421875e-06
+>>> Epoch 287 Test Avg Loss: 8.803, Test Accuracy: 13.730, learning rate: 7.32421875e-06
+>>> Epoch 288 Test Avg Loss: 8.790, Test Accuracy: 13.817, learning rate: 7.32421875e-06
+>>> Epoch 289 Test Avg Loss: 8.839, Test Accuracy: 13.638, learning rate: 7.32421875e-06
+>>> Epoch 290 Test Avg Loss: 8.788, Test Accuracy: 13.733, learning rate: 7.32421875e-06
+>>> Epoch 291 Test Avg Loss: 8.810, Test Accuracy: 13.768, learning rate: 7.32421875e-06
+>>> Epoch 292 Test Avg Loss: 8.834, Test Accuracy: 13.821, learning rate: 7.32421875e-06
+>>> Epoch 293 Test Avg Loss: 8.808, Test Accuracy: 13.837, learning rate: 7.32421875e-06
+>>> Epoch 294 Test Avg Loss: 8.840, Test Accuracy: 13.779, learning rate: 7.32421875e-06
+>>> Epoch 295 Test Avg Loss: 8.758, Test Accuracy: 13.813, learning rate: 7.32421875e-06
+>>> Epoch 296 Test Avg Loss: 8.819, Test Accuracy: 13.766, learning rate: 7.32421875e-06
+>>> Epoch 297 Test Avg Loss: 8.861, Test Accuracy: 13.697, learning rate: 7.32421875e-06
+>>> Epoch 298 Test Avg Loss: 8.823, Test Accuracy: 13.675, learning rate: 7.32421875e-06
+>>> Epoch 299 Test Avg Loss: 8.849, Test Accuracy: 13.762, learning rate: 7.32421875e-06
+Epoch   299: reducing learning rate of group 0 to 3.6621e-06.
+>>> Epoch 300 Test Avg Loss: 8.873, Test Accuracy: 13.691, learning rate: 3.662109375e-06
+Done ##############################################
+>>> using 56 workers
+Files already downloaded and verified
+Namespace(alpha=1.0, beta1=0.9, beta2=0.999, datapath='./data/', dataset='cifar100', epochs=300, expand_labels=False, factor=0.5, log_dir='./runs', lr=0.03, min_lr=1e-07, model_depth=28, model_dir='./saved_models', model_width=2, momentum=0.9, multiplier=3, num_classes=100, num_labeled=10000, num_workers=56, patience=10, test_batch=1024, threshold=0.95, train_batch=1024, vat_eps=8.0, vat_iter=4, vat_xi=8.0, wandb=False, warmup_epochs=35, wd=5e-05)
+>>> Warmup Training
+>>> Epoch 1 Train Avg Loss: 4.730, Train Accuracy: 1.081
+>>> Epoch 1 Test Avg Loss: 30367.120, Test Accuracy: 0.994, learning rate: 0.03
+>>> Epoch 2 Train Avg Loss: 4.560, Train Accuracy: 1.605
+>>> Epoch 2 Test Avg Loss: 93.206, Test Accuracy: 1.606, learning rate: 0.03
+>>> Epoch 3 Train Avg Loss: 4.470, Train Accuracy: 2.418
+>>> Epoch 3 Test Avg Loss: 16.159, Test Accuracy: 1.305, learning rate: 0.03
+>>> Epoch 4 Train Avg Loss: 4.393, Train Accuracy: 2.576
+>>> Epoch 4 Test Avg Loss: 5.087, Test Accuracy: 2.188, learning rate: 0.03
+>>> Epoch 5 Train Avg Loss: 4.326, Train Accuracy: 3.069
+>>> Epoch 5 Test Avg Loss: 4.563, Test Accuracy: 2.717, learning rate: 0.03
+>>> Epoch 6 Train Avg Loss: 4.252, Train Accuracy: 4.349
+>>> Epoch 6 Test Avg Loss: 4.352, Test Accuracy: 4.154, learning rate: 0.03
+>>> Epoch 7 Train Avg Loss: 4.155, Train Accuracy: 4.829
+>>> Epoch 7 Test Avg Loss: 4.189, Test Accuracy: 4.980, learning rate: 0.03
+>>> Epoch 8 Train Avg Loss: 4.060, Train Accuracy: 6.022
+>>> Epoch 8 Test Avg Loss: 4.084, Test Accuracy: 5.965, learning rate: 0.03
+>>> Epoch 9 Train Avg Loss: 3.983, Train Accuracy: 7.021
+>>> Epoch 9 Test Avg Loss: 4.436, Test Accuracy: 5.265, learning rate: 0.03
+>>> Epoch 10 Train Avg Loss: 3.926, Train Accuracy: 7.169
+>>> Epoch 10 Test Avg Loss: 3.972, Test Accuracy: 7.699, learning rate: 0.03
+>>> Epoch 11 Train Avg Loss: 3.852, Train Accuracy: 8.459
+>>> Epoch 11 Test Avg Loss: 3.981, Test Accuracy: 7.903, learning rate: 0.03
+>>> Epoch 12 Train Avg Loss: 3.805, Train Accuracy: 9.419
+>>> Epoch 12 Test Avg Loss: 3.976, Test Accuracy: 8.831, learning rate: 0.03
+>>> Epoch 13 Train Avg Loss: 3.744, Train Accuracy: 11.013
+>>> Epoch 13 Test Avg Loss: 3.905, Test Accuracy: 9.468, learning rate: 0.03
+>>> Epoch 14 Train Avg Loss: 3.688, Train Accuracy: 11.457
+>>> Epoch 14 Test Avg Loss: 3.849, Test Accuracy: 9.836, learning rate: 0.03
+>>> Epoch 15 Train Avg Loss: 3.613, Train Accuracy: 12.597
+>>> Epoch 15 Test Avg Loss: 3.701, Test Accuracy: 12.688, learning rate: 0.03
+>>> Epoch 16 Train Avg Loss: 3.553, Train Accuracy: 13.766
+>>> Epoch 16 Test Avg Loss: 3.763, Test Accuracy: 12.060, learning rate: 0.03
+>>> Epoch 17 Train Avg Loss: 3.508, Train Accuracy: 14.994
+>>> Epoch 17 Test Avg Loss: 3.724, Test Accuracy: 12.972, learning rate: 0.03
+>>> Epoch 18 Train Avg Loss: 3.430, Train Accuracy: 16.034
+>>> Epoch 18 Test Avg Loss: 3.590, Test Accuracy: 14.780, learning rate: 0.03
+>>> Epoch 19 Train Avg Loss: 3.401, Train Accuracy: 16.788
+>>> Epoch 19 Test Avg Loss: 3.597, Test Accuracy: 14.698, learning rate: 0.03
+>>> Epoch 20 Train Avg Loss: 3.351, Train Accuracy: 17.356
+>>> Epoch 20 Test Avg Loss: 3.715, Test Accuracy: 14.441, learning rate: 0.03
+>>> Epoch 21 Train Avg Loss: 3.286, Train Accuracy: 18.228
+>>> Epoch 21 Test Avg Loss: 3.516, Test Accuracy: 16.271, learning rate: 0.03
+>>> Epoch 22 Train Avg Loss: 3.224, Train Accuracy: 20.167
+>>> Epoch 22 Test Avg Loss: 3.470, Test Accuracy: 17.425, learning rate: 0.03
+>>> Epoch 23 Train Avg Loss: 3.160, Train Accuracy: 21.037
+>>> Epoch 23 Test Avg Loss: 3.574, Test Accuracy: 16.880, learning rate: 0.03
+>>> Epoch 24 Train Avg Loss: 3.099, Train Accuracy: 22.336
+>>> Epoch 24 Test Avg Loss: 3.368, Test Accuracy: 19.503, learning rate: 0.03
+>>> Epoch 25 Train Avg Loss: 3.014, Train Accuracy: 24.349
+>>> Epoch 25 Test Avg Loss: 3.468, Test Accuracy: 18.440, learning rate: 0.03
+>>> Epoch 26 Train Avg Loss: 2.972, Train Accuracy: 24.974
+>>> Epoch 26 Test Avg Loss: 3.369, Test Accuracy: 21.193, learning rate: 0.03
+>>> Epoch 27 Train Avg Loss: 2.893, Train Accuracy: 26.290
+>>> Epoch 27 Test Avg Loss: 3.419, Test Accuracy: 20.380, learning rate: 0.03
+>>> Epoch 28 Train Avg Loss: 2.844, Train Accuracy: 27.482
+>>> Epoch 28 Test Avg Loss: 3.410, Test Accuracy: 20.695, learning rate: 0.03
+>>> Epoch 29 Train Avg Loss: 2.786, Train Accuracy: 28.739
+>>> Epoch 29 Test Avg Loss: 3.266, Test Accuracy: 23.413, learning rate: 0.03
+>>> Epoch 30 Train Avg Loss: 2.723, Train Accuracy: 29.497
+>>> Epoch 30 Test Avg Loss: 3.295, Test Accuracy: 22.782, learning rate: 0.03
+>>> Epoch 31 Train Avg Loss: 2.654, Train Accuracy: 31.204
+>>> Epoch 31 Test Avg Loss: 3.248, Test Accuracy: 24.352, learning rate: 0.03
+>>> Epoch 32 Train Avg Loss: 2.582, Train Accuracy: 32.267
+>>> Epoch 32 Test Avg Loss: 3.227, Test Accuracy: 24.142, learning rate: 0.03
+>>> Epoch 33 Train Avg Loss: 2.500, Train Accuracy: 34.831
+>>> Epoch 33 Test Avg Loss: 3.369, Test Accuracy: 21.753, learning rate: 0.03
+>>> Epoch 34 Train Avg Loss: 2.456, Train Accuracy: 34.963
+>>> Epoch 34 Test Avg Loss: 3.260, Test Accuracy: 24.725, learning rate: 0.03
+>>> Epoch 35 Train Avg Loss: 2.398, Train Accuracy: 36.090
+>>> Epoch 35 Test Avg Loss: 3.164, Test Accuracy: 26.392, learning rate: 0.03
+>>> Loading Best Model-val_loss: 3.164
+Model loaded from epoch 35
+>>> VAT Training
+>>> Epoch 36 Test Avg Loss: 6.425, Test Accuracy: 0.958, learning rate: 0.03
+>>> Epoch 37 Test Avg Loss: 4.672, Test Accuracy: 0.977, learning rate: 0.03
+>>> Epoch 38 Test Avg Loss: 4.632, Test Accuracy: 1.413, learning rate: 0.03
+>>> Epoch 39 Test Avg Loss: 4.639, Test Accuracy: 1.186, learning rate: 0.03
+>>> Epoch 40 Test Avg Loss: 4.456, Test Accuracy: 3.029, learning rate: 0.03
+>>> Epoch 41 Test Avg Loss: 4.171, Test Accuracy: 6.750, learning rate: 0.03
+>>> Epoch 42 Test Avg Loss: 4.660, Test Accuracy: 2.337, learning rate: 0.03
+>>> Epoch 43 Test Avg Loss: 4.480, Test Accuracy: 2.665, learning rate: 0.03
+>>> Epoch 44 Test Avg Loss: 4.354, Test Accuracy: 4.217, learning rate: 0.03
+>>> Epoch 45 Test Avg Loss: 4.276, Test Accuracy: 4.866, learning rate: 0.03
+>>> Epoch 46 Test Avg Loss: 4.014, Test Accuracy: 8.535, learning rate: 0.03
+Epoch    46: reducing learning rate of group 0 to 1.5000e-02.
+>>> Epoch 47 Test Avg Loss: 3.931, Test Accuracy: 10.005, learning rate: 0.015
+>>> Epoch 48 Test Avg Loss: 3.764, Test Accuracy: 12.800, learning rate: 0.015
+>>> Epoch 49 Test Avg Loss: 3.691, Test Accuracy: 14.713, learning rate: 0.015
+>>> Epoch 50 Test Avg Loss: 3.696, Test Accuracy: 14.440, learning rate: 0.015
+>>> Epoch 51 Test Avg Loss: 3.648, Test Accuracy: 15.151, learning rate: 0.015
+>>> Epoch 52 Test Avg Loss: 3.592, Test Accuracy: 15.710, learning rate: 0.015
+>>> Epoch 53 Test Avg Loss: 3.613, Test Accuracy: 15.108, learning rate: 0.015
+>>> Epoch 54 Test Avg Loss: 3.631, Test Accuracy: 14.994, learning rate: 0.015
+>>> Epoch 55 Test Avg Loss: 3.587, Test Accuracy: 16.110, learning rate: 0.015
+>>> Epoch 56 Test Avg Loss: 3.565, Test Accuracy: 16.649, learning rate: 0.015
+>>> Epoch 57 Test Avg Loss: 3.539, Test Accuracy: 17.467, learning rate: 0.015
+>>> Epoch 58 Test Avg Loss: 3.528, Test Accuracy: 16.828, learning rate: 0.015
+>>> Epoch 59 Test Avg Loss: 3.535, Test Accuracy: 16.539, learning rate: 0.015
+>>> Epoch 60 Test Avg Loss: 3.517, Test Accuracy: 17.267, learning rate: 0.015
+>>> Epoch 61 Test Avg Loss: 3.567, Test Accuracy: 17.304, learning rate: 0.015
+Epoch    61: reducing learning rate of group 0 to 7.5000e-03.
+>>> Epoch 62 Test Avg Loss: 3.479, Test Accuracy: 18.054, learning rate: 0.0075
+>>> Epoch 63 Test Avg Loss: 3.446, Test Accuracy: 19.282, learning rate: 0.0075
+>>> Epoch 64 Test Avg Loss: 3.435, Test Accuracy: 19.416, learning rate: 0.0075
+>>> Epoch 65 Test Avg Loss: 3.454, Test Accuracy: 18.923, learning rate: 0.0075
+>>> Epoch 66 Test Avg Loss: 3.420, Test Accuracy: 19.577, learning rate: 0.0075
+>>> Epoch 67 Test Avg Loss: 3.421, Test Accuracy: 19.509, learning rate: 0.0075
+>>> Epoch 68 Test Avg Loss: 3.421, Test Accuracy: 19.608, learning rate: 0.0075
+>>> Epoch 69 Test Avg Loss: 3.429, Test Accuracy: 19.715, learning rate: 0.0075
+>>> Epoch 70 Test Avg Loss: 3.393, Test Accuracy: 20.250, learning rate: 0.0075
+>>> Epoch 71 Test Avg Loss: 3.390, Test Accuracy: 20.054, learning rate: 0.0075
+>>> Epoch 72 Test Avg Loss: 3.389, Test Accuracy: 20.231, learning rate: 0.0075
+>>> Epoch 73 Test Avg Loss: 3.383, Test Accuracy: 20.610, learning rate: 0.0075
+>>> Epoch 74 Test Avg Loss: 3.377, Test Accuracy: 20.601, learning rate: 0.0075
+>>> Epoch 75 Test Avg Loss: 3.420, Test Accuracy: 20.048, learning rate: 0.0075
+>>> Epoch 76 Test Avg Loss: 3.393, Test Accuracy: 20.670, learning rate: 0.0075
+Epoch    76: reducing learning rate of group 0 to 3.7500e-03.
+>>> Epoch 77 Test Avg Loss: 3.377, Test Accuracy: 20.689, learning rate: 0.00375
+>>> Epoch 78 Test Avg Loss: 3.366, Test Accuracy: 20.803, learning rate: 0.00375
+>>> Epoch 79 Test Avg Loss: 3.338, Test Accuracy: 21.093, learning rate: 0.00375
+>>> Epoch 80 Test Avg Loss: 3.347, Test Accuracy: 21.297, learning rate: 0.00375
+>>> Epoch 81 Test Avg Loss: 3.343, Test Accuracy: 21.287, learning rate: 0.00375
+>>> Epoch 82 Test Avg Loss: 3.343, Test Accuracy: 21.144, learning rate: 0.00375
+>>> Epoch 83 Test Avg Loss: 3.346, Test Accuracy: 21.440, learning rate: 0.00375
+>>> Epoch 84 Test Avg Loss: 3.337, Test Accuracy: 21.725, learning rate: 0.00375
+>>> Epoch 85 Test Avg Loss: 3.387, Test Accuracy: 21.096, learning rate: 0.00375
+>>> Epoch 86 Test Avg Loss: 3.319, Test Accuracy: 21.669, learning rate: 0.00375
+>>> Epoch 87 Test Avg Loss: 3.342, Test Accuracy: 21.516, learning rate: 0.00375
+>>> Epoch 88 Test Avg Loss: 3.323, Test Accuracy: 21.672, learning rate: 0.00375
+>>> Epoch 89 Test Avg Loss: 3.334, Test Accuracy: 21.651, learning rate: 0.00375
+>>> Epoch 90 Test Avg Loss: 3.318, Test Accuracy: 21.794, learning rate: 0.00375
+>>> Epoch 91 Test Avg Loss: 3.314, Test Accuracy: 21.948, learning rate: 0.00375
+Epoch    91: reducing learning rate of group 0 to 1.8750e-03.
+>>> Epoch 92 Test Avg Loss: 3.317, Test Accuracy: 21.810, learning rate: 0.001875
+>>> Epoch 93 Test Avg Loss: 3.335, Test Accuracy: 21.859, learning rate: 0.001875
+>>> Epoch 94 Test Avg Loss: 3.300, Test Accuracy: 22.529, learning rate: 0.001875
+>>> Epoch 95 Test Avg Loss: 3.339, Test Accuracy: 21.793, learning rate: 0.001875
+>>> Epoch 96 Test Avg Loss: 3.315, Test Accuracy: 22.068, learning rate: 0.001875
+>>> Epoch 97 Test Avg Loss: 3.313, Test Accuracy: 22.063, learning rate: 0.001875
+>>> Epoch 98 Test Avg Loss: 3.306, Test Accuracy: 21.998, learning rate: 0.001875
+>>> Epoch 99 Test Avg Loss: 3.311, Test Accuracy: 21.999, learning rate: 0.001875
+>>> Epoch 100 Test Avg Loss: 3.313, Test Accuracy: 22.078, learning rate: 0.001875
+>>> Epoch 101 Test Avg Loss: 3.306, Test Accuracy: 22.115, learning rate: 0.001875
+>>> Epoch 102 Test Avg Loss: 3.292, Test Accuracy: 22.578, learning rate: 0.001875
+>>> Epoch 103 Test Avg Loss: 3.298, Test Accuracy: 22.382, learning rate: 0.001875
+>>> Epoch 104 Test Avg Loss: 3.292, Test Accuracy: 22.469, learning rate: 0.001875
+>>> Epoch 105 Test Avg Loss: 3.312, Test Accuracy: 22.150, learning rate: 0.001875
+>>> Epoch 106 Test Avg Loss: 3.286, Test Accuracy: 22.410, learning rate: 0.001875
+Epoch   106: reducing learning rate of group 0 to 9.3750e-04.
+>>> Epoch 107 Test Avg Loss: 3.270, Test Accuracy: 22.539, learning rate: 0.0009375
+>>> Epoch 108 Test Avg Loss: 3.293, Test Accuracy: 22.180, learning rate: 0.0009375
+>>> Epoch 109 Test Avg Loss: 3.283, Test Accuracy: 22.523, learning rate: 0.0009375
+>>> Epoch 110 Test Avg Loss: 3.283, Test Accuracy: 22.599, learning rate: 0.0009375
+>>> Epoch 111 Test Avg Loss: 3.285, Test Accuracy: 22.442, learning rate: 0.0009375
+>>> Epoch 112 Test Avg Loss: 3.278, Test Accuracy: 22.695, learning rate: 0.0009375
+>>> Epoch 113 Test Avg Loss: 3.286, Test Accuracy: 22.614, learning rate: 0.0009375
+>>> Epoch 114 Test Avg Loss: 3.279, Test Accuracy: 22.673, learning rate: 0.0009375
+>>> Epoch 115 Test Avg Loss: 3.303, Test Accuracy: 22.350, learning rate: 0.0009375
+>>> Epoch 116 Test Avg Loss: 3.280, Test Accuracy: 22.575, learning rate: 0.0009375
+>>> Epoch 117 Test Avg Loss: 3.274, Test Accuracy: 22.581, learning rate: 0.0009375
+>>> Epoch 118 Test Avg Loss: 3.283, Test Accuracy: 22.442, learning rate: 0.0009375
+>>> Epoch 119 Test Avg Loss: 3.273, Test Accuracy: 22.686, learning rate: 0.0009375
+>>> Epoch 120 Test Avg Loss: 3.276, Test Accuracy: 22.578, learning rate: 0.0009375
+>>> Epoch 121 Test Avg Loss: 3.271, Test Accuracy: 22.744, learning rate: 0.0009375
+Epoch   121: reducing learning rate of group 0 to 4.6875e-04.
+>>> Epoch 122 Test Avg Loss: 3.240, Test Accuracy: 22.825, learning rate: 0.00046875
+>>> Epoch 123 Test Avg Loss: 3.272, Test Accuracy: 22.445, learning rate: 0.00046875
+>>> Epoch 124 Test Avg Loss: 3.266, Test Accuracy: 22.600, learning rate: 0.00046875
+>>> Epoch 125 Test Avg Loss: 3.271, Test Accuracy: 22.681, learning rate: 0.00046875
+>>> Epoch 126 Test Avg Loss: 3.261, Test Accuracy: 22.517, learning rate: 0.00046875
+>>> Epoch 127 Test Avg Loss: 3.258, Test Accuracy: 22.657, learning rate: 0.00046875
+>>> Epoch 128 Test Avg Loss: 3.254, Test Accuracy: 22.725, learning rate: 0.00046875
+>>> Epoch 129 Test Avg Loss: 3.268, Test Accuracy: 22.653, learning rate: 0.00046875
+>>> Epoch 130 Test Avg Loss: 3.256, Test Accuracy: 22.790, learning rate: 0.00046875
+>>> Epoch 131 Test Avg Loss: 3.255, Test Accuracy: 22.706, learning rate: 0.00046875
+>>> Epoch 132 Test Avg Loss: 3.264, Test Accuracy: 22.543, learning rate: 0.00046875
+>>> Epoch 133 Test Avg Loss: 3.259, Test Accuracy: 22.575, learning rate: 0.00046875
+>>> Epoch 134 Test Avg Loss: 3.258, Test Accuracy: 22.647, learning rate: 0.00046875
+>>> Epoch 135 Test Avg Loss: 3.268, Test Accuracy: 22.605, learning rate: 0.00046875
+>>> Epoch 136 Test Avg Loss: 3.256, Test Accuracy: 22.701, learning rate: 0.00046875
+Epoch   136: reducing learning rate of group 0 to 2.3437e-04.
+>>> Epoch 137 Test Avg Loss: 3.210, Test Accuracy: 23.173, learning rate: 0.000234375
+>>> Epoch 138 Test Avg Loss: 3.227, Test Accuracy: 22.988, learning rate: 0.000234375
+>>> Epoch 139 Test Avg Loss: 3.239, Test Accuracy: 22.832, learning rate: 0.000234375
+>>> Epoch 140 Test Avg Loss: 3.242, Test Accuracy: 22.780, learning rate: 0.000234375
+>>> Epoch 141 Test Avg Loss: 3.242, Test Accuracy: 22.787, learning rate: 0.000234375
+>>> Epoch 142 Test Avg Loss: 3.241, Test Accuracy: 22.916, learning rate: 0.000234375
+>>> Epoch 143 Test Avg Loss: 3.239, Test Accuracy: 22.803, learning rate: 0.000234375
+>>> Epoch 144 Test Avg Loss: 3.236, Test Accuracy: 22.790, learning rate: 0.000234375
+>>> Epoch 145 Test Avg Loss: 3.250, Test Accuracy: 22.589, learning rate: 0.000234375
+>>> Epoch 146 Test Avg Loss: 3.246, Test Accuracy: 22.706, learning rate: 0.000234375
+>>> Epoch 147 Test Avg Loss: 3.241, Test Accuracy: 22.676, learning rate: 0.000234375
+>>> Epoch 148 Test Avg Loss: 3.241, Test Accuracy: 22.524, learning rate: 0.000234375
+>>> Epoch 149 Test Avg Loss: 3.239, Test Accuracy: 22.663, learning rate: 0.000234375
+>>> Epoch 150 Test Avg Loss: 3.237, Test Accuracy: 22.832, learning rate: 0.000234375
+>>> Epoch 151 Test Avg Loss: 3.241, Test Accuracy: 22.647, learning rate: 0.000234375
+Epoch   151: reducing learning rate of group 0 to 1.1719e-04.
+>>> Epoch 152 Test Avg Loss: 3.199, Test Accuracy: 23.293, learning rate: 0.0001171875
+>>> Epoch 153 Test Avg Loss: 3.201, Test Accuracy: 23.206, learning rate: 0.0001171875
+>>> Epoch 154 Test Avg Loss: 3.212, Test Accuracy: 22.969, learning rate: 0.0001171875
+>>> Epoch 155 Test Avg Loss: 3.220, Test Accuracy: 22.910, learning rate: 0.0001171875
+>>> Epoch 156 Test Avg Loss: 3.220, Test Accuracy: 23.011, learning rate: 0.0001171875
+>>> Epoch 157 Test Avg Loss: 3.217, Test Accuracy: 22.994, learning rate: 0.0001171875
+>>> Epoch 158 Test Avg Loss: 3.215, Test Accuracy: 23.173, learning rate: 0.0001171875
+>>> Epoch 159 Test Avg Loss: 3.218, Test Accuracy: 22.932, learning rate: 0.0001171875
+>>> Epoch 160 Test Avg Loss: 3.216, Test Accuracy: 23.013, learning rate: 0.0001171875
+>>> Epoch 161 Test Avg Loss: 3.218, Test Accuracy: 23.059, learning rate: 0.0001171875
+>>> Epoch 162 Test Avg Loss: 3.217, Test Accuracy: 22.932, learning rate: 0.0001171875
+>>> Epoch 163 Test Avg Loss: 3.216, Test Accuracy: 22.883, learning rate: 0.0001171875
+>>> Epoch 164 Test Avg Loss: 3.221, Test Accuracy: 22.929, learning rate: 0.0001171875
+>>> Epoch 165 Test Avg Loss: 3.222, Test Accuracy: 22.890, learning rate: 0.0001171875
+>>> Epoch 166 Test Avg Loss: 3.218, Test Accuracy: 22.978, learning rate: 0.0001171875
+Epoch   166: reducing learning rate of group 0 to 5.8594e-05.
+>>> Epoch 167 Test Avg Loss: 3.192, Test Accuracy: 23.239, learning rate: 5.859375e-05
+>>> Epoch 168 Test Avg Loss: 3.190, Test Accuracy: 23.210, learning rate: 5.859375e-05
+>>> Epoch 169 Test Avg Loss: 3.193, Test Accuracy: 23.164, learning rate: 5.859375e-05
+>>> Epoch 170 Test Avg Loss: 3.197, Test Accuracy: 23.064, learning rate: 5.859375e-05
+>>> Epoch 171 Test Avg Loss: 3.198, Test Accuracy: 23.128, learning rate: 5.859375e-05
+>>> Epoch 172 Test Avg Loss: 3.200, Test Accuracy: 23.064, learning rate: 5.859375e-05
+>>> Epoch 173 Test Avg Loss: 3.200, Test Accuracy: 23.067, learning rate: 5.859375e-05
+>>> Epoch 174 Test Avg Loss: 3.201, Test Accuracy: 22.924, learning rate: 5.859375e-05
+>>> Epoch 175 Test Avg Loss: 3.203, Test Accuracy: 23.038, learning rate: 5.859375e-05
+>>> Epoch 176 Test Avg Loss: 3.203, Test Accuracy: 22.973, learning rate: 5.859375e-05
+>>> Epoch 177 Test Avg Loss: 3.204, Test Accuracy: 22.905, learning rate: 5.859375e-05
+>>> Epoch 178 Test Avg Loss: 3.205, Test Accuracy: 22.811, learning rate: 5.859375e-05
+>>> Epoch 179 Test Avg Loss: 3.206, Test Accuracy: 22.834, learning rate: 5.859375e-05
+>>> Epoch 180 Test Avg Loss: 3.202, Test Accuracy: 22.892, learning rate: 5.859375e-05
+>>> Epoch 181 Test Avg Loss: 3.205, Test Accuracy: 22.805, learning rate: 5.859375e-05
+Epoch   181: reducing learning rate of group 0 to 2.9297e-05.
+>>> Epoch 182 Test Avg Loss: 3.192, Test Accuracy: 23.028, learning rate: 2.9296875e-05
+>>> Epoch 183 Test Avg Loss: 3.188, Test Accuracy: 23.097, learning rate: 2.9296875e-05
+>>> Epoch 184 Test Avg Loss: 3.189, Test Accuracy: 22.987, learning rate: 2.9296875e-05
+>>> Epoch 185 Test Avg Loss: 3.191, Test Accuracy: 22.993, learning rate: 2.9296875e-05
+>>> Epoch 186 Test Avg Loss: 3.192, Test Accuracy: 22.912, learning rate: 2.9296875e-05
+>>> Epoch 187 Test Avg Loss: 3.194, Test Accuracy: 23.010, learning rate: 2.9296875e-05
+>>> Epoch 188 Test Avg Loss: 3.193, Test Accuracy: 23.046, learning rate: 2.9296875e-05
+>>> Epoch 189 Test Avg Loss: 3.194, Test Accuracy: 23.010, learning rate: 2.9296875e-05
+>>> Epoch 190 Test Avg Loss: 3.196, Test Accuracy: 22.958, learning rate: 2.9296875e-05
+>>> Epoch 191 Test Avg Loss: 3.195, Test Accuracy: 22.994, learning rate: 2.9296875e-05
+>>> Epoch 192 Test Avg Loss: 3.195, Test Accuracy: 22.945, learning rate: 2.9296875e-05
+>>> Epoch 193 Test Avg Loss: 3.195, Test Accuracy: 22.938, learning rate: 2.9296875e-05
+>>> Epoch 194 Test Avg Loss: 3.199, Test Accuracy: 22.883, learning rate: 2.9296875e-05
+>>> Epoch 195 Test Avg Loss: 3.200, Test Accuracy: 22.874, learning rate: 2.9296875e-05
+>>> Epoch 196 Test Avg Loss: 3.200, Test Accuracy: 22.981, learning rate: 2.9296875e-05
+Epoch   196: reducing learning rate of group 0 to 1.4648e-05.
+>>> Epoch 197 Test Avg Loss: 3.194, Test Accuracy: 22.946, learning rate: 1.46484375e-05
+>>> Epoch 198 Test Avg Loss: 3.192, Test Accuracy: 22.997, learning rate: 1.46484375e-05
+>>> Epoch 199 Test Avg Loss: 3.193, Test Accuracy: 22.890, learning rate: 1.46484375e-05
+>>> Epoch 200 Test Avg Loss: 3.193, Test Accuracy: 22.975, learning rate: 1.46484375e-05
+>>> Epoch 201 Test Avg Loss: 3.193, Test Accuracy: 22.865, learning rate: 1.46484375e-05
+>>> Epoch 202 Test Avg Loss: 3.195, Test Accuracy: 22.949, learning rate: 1.46484375e-05
+>>> Epoch 203 Test Avg Loss: 3.193, Test Accuracy: 23.043, learning rate: 1.46484375e-05
+>>> Epoch 204 Test Avg Loss: 3.195, Test Accuracy: 22.906, learning rate: 1.46484375e-05
+>>> Epoch 205 Test Avg Loss: 3.196, Test Accuracy: 22.935, learning rate: 1.46484375e-05
+>>> Epoch 206 Test Avg Loss: 3.197, Test Accuracy: 22.984, learning rate: 1.46484375e-05
+>>> Epoch 207 Test Avg Loss: 3.198, Test Accuracy: 22.991, learning rate: 1.46484375e-05
+>>> Epoch 208 Test Avg Loss: 3.198, Test Accuracy: 22.926, learning rate: 1.46484375e-05
+>>> Epoch 209 Test Avg Loss: 3.198, Test Accuracy: 22.971, learning rate: 1.46484375e-05
+>>> Epoch 210 Test Avg Loss: 3.198, Test Accuracy: 22.853, learning rate: 1.46484375e-05
+>>> Epoch 211 Test Avg Loss: 3.198, Test Accuracy: 22.854, learning rate: 1.46484375e-05
+Epoch   211: reducing learning rate of group 0 to 7.3242e-06.
+>>> Epoch 212 Test Avg Loss: 3.196, Test Accuracy: 22.990, learning rate: 7.32421875e-06
+>>> Epoch 213 Test Avg Loss: 3.195, Test Accuracy: 23.088, learning rate: 7.32421875e-06
+>>> Epoch 214 Test Avg Loss: 3.195, Test Accuracy: 23.078, learning rate: 7.32421875e-06
+>>> Epoch 215 Test Avg Loss: 3.196, Test Accuracy: 23.023, learning rate: 7.32421875e-06
+>>> Epoch 216 Test Avg Loss: 3.196, Test Accuracy: 23.036, learning rate: 7.32421875e-06
+>>> Epoch 217 Test Avg Loss: 3.197, Test Accuracy: 23.006, learning rate: 7.32421875e-06
+>>> Epoch 218 Test Avg Loss: 3.196, Test Accuracy: 23.016, learning rate: 7.32421875e-06
+>>> Epoch 219 Test Avg Loss: 3.197, Test Accuracy: 22.974, learning rate: 7.32421875e-06
+>>> Epoch 220 Test Avg Loss: 3.198, Test Accuracy: 23.109, learning rate: 7.32421875e-06
+>>> Epoch 221 Test Avg Loss: 3.197, Test Accuracy: 23.055, learning rate: 7.32421875e-06
+>>> Epoch 222 Test Avg Loss: 3.196, Test Accuracy: 23.103, learning rate: 7.32421875e-06
+>>> Epoch 223 Test Avg Loss: 3.197, Test Accuracy: 22.965, learning rate: 7.32421875e-06
+>>> Epoch 224 Test Avg Loss: 3.197, Test Accuracy: 22.944, learning rate: 7.32421875e-06
+>>> Epoch 225 Test Avg Loss: 3.198, Test Accuracy: 23.010, learning rate: 7.32421875e-06
+>>> Epoch 226 Test Avg Loss: 3.199, Test Accuracy: 23.061, learning rate: 7.32421875e-06
+Epoch   226: reducing learning rate of group 0 to 3.6621e-06.
+>>> Epoch 227 Test Avg Loss: 3.199, Test Accuracy: 23.087, learning rate: 3.662109375e-06
+>>> Epoch 228 Test Avg Loss: 3.198, Test Accuracy: 23.055, learning rate: 3.662109375e-06
+>>> Epoch 229 Test Avg Loss: 3.198, Test Accuracy: 22.999, learning rate: 3.662109375e-06
+>>> Epoch 230 Test Avg Loss: 3.198, Test Accuracy: 23.048, learning rate: 3.662109375e-06
+>>> Epoch 231 Test Avg Loss: 3.196, Test Accuracy: 23.019, learning rate: 3.662109375e-06
+>>> Epoch 232 Test Avg Loss: 3.198, Test Accuracy: 23.045, learning rate: 3.662109375e-06
+>>> Epoch 233 Test Avg Loss: 3.197, Test Accuracy: 23.077, learning rate: 3.662109375e-06
+>>> Epoch 234 Test Avg Loss: 3.200, Test Accuracy: 22.989, learning rate: 3.662109375e-06
+>>> Epoch 235 Test Avg Loss: 3.199, Test Accuracy: 23.031, learning rate: 3.662109375e-06
+>>> Epoch 236 Test Avg Loss: 3.197, Test Accuracy: 23.045, learning rate: 3.662109375e-06
+>>> Epoch 237 Test Avg Loss: 3.198, Test Accuracy: 22.993, learning rate: 3.662109375e-06
+>>> Epoch 238 Test Avg Loss: 3.198, Test Accuracy: 23.041, learning rate: 3.662109375e-06
+>>> Epoch 239 Test Avg Loss: 3.199, Test Accuracy: 23.000, learning rate: 3.662109375e-06
+>>> Epoch 240 Test Avg Loss: 3.199, Test Accuracy: 22.986, learning rate: 3.662109375e-06
+>>> Epoch 241 Test Avg Loss: 3.200, Test Accuracy: 22.999, learning rate: 3.662109375e-06
+Epoch   241: reducing learning rate of group 0 to 1.8311e-06.
+>>> Epoch 242 Test Avg Loss: 3.199, Test Accuracy: 23.070, learning rate: 1.8310546875e-06
+>>> Epoch 243 Test Avg Loss: 3.199, Test Accuracy: 23.051, learning rate: 1.8310546875e-06
+>>> Epoch 244 Test Avg Loss: 3.199, Test Accuracy: 23.058, learning rate: 1.8310546875e-06
+>>> Epoch 245 Test Avg Loss: 3.199, Test Accuracy: 23.087, learning rate: 1.8310546875e-06
+>>> Epoch 246 Test Avg Loss: 3.199, Test Accuracy: 23.051, learning rate: 1.8310546875e-06
+>>> Epoch 247 Test Avg Loss: 3.198, Test Accuracy: 22.996, learning rate: 1.8310546875e-06
+>>> Epoch 248 Test Avg Loss: 3.200, Test Accuracy: 23.041, learning rate: 1.8310546875e-06
+>>> Epoch 249 Test Avg Loss: 3.199, Test Accuracy: 23.012, learning rate: 1.8310546875e-06
+>>> Epoch 250 Test Avg Loss: 3.199, Test Accuracy: 23.015, learning rate: 1.8310546875e-06
+>>> Epoch 251 Test Avg Loss: 3.199, Test Accuracy: 23.019, learning rate: 1.8310546875e-06
+>>> Epoch 252 Test Avg Loss: 3.198, Test Accuracy: 23.087, learning rate: 1.8310546875e-06
+>>> Epoch 253 Test Avg Loss: 3.199, Test Accuracy: 22.992, learning rate: 1.8310546875e-06
+>>> Epoch 254 Test Avg Loss: 3.200, Test Accuracy: 23.061, learning rate: 1.8310546875e-06
+>>> Epoch 255 Test Avg Loss: 3.198, Test Accuracy: 22.957, learning rate: 1.8310546875e-06
+>>> Epoch 256 Test Avg Loss: 3.200, Test Accuracy: 23.002, learning rate: 1.8310546875e-06
+Epoch   256: reducing learning rate of group 0 to 9.1553e-07.
+>>> Epoch 257 Test Avg Loss: 3.200, Test Accuracy: 22.992, learning rate: 9.1552734375e-07
+>>> Epoch 258 Test Avg Loss: 3.199, Test Accuracy: 22.983, learning rate: 9.1552734375e-07
+>>> Epoch 259 Test Avg Loss: 3.199, Test Accuracy: 23.061, learning rate: 9.1552734375e-07
+>>> Epoch 260 Test Avg Loss: 3.199, Test Accuracy: 23.125, learning rate: 9.1552734375e-07
+>>> Epoch 261 Test Avg Loss: 3.199, Test Accuracy: 23.028, learning rate: 9.1552734375e-07
+>>> Epoch 262 Test Avg Loss: 3.199, Test Accuracy: 23.061, learning rate: 9.1552734375e-07
+>>> Epoch 263 Test Avg Loss: 3.199, Test Accuracy: 22.983, learning rate: 9.1552734375e-07
+>>> Epoch 264 Test Avg Loss: 3.200, Test Accuracy: 22.973, learning rate: 9.1552734375e-07
+>>> Epoch 265 Test Avg Loss: 3.200, Test Accuracy: 23.058, learning rate: 9.1552734375e-07
+>>> Epoch 266 Test Avg Loss: 3.200, Test Accuracy: 23.006, learning rate: 9.1552734375e-07
+>>> Epoch 267 Test Avg Loss: 3.199, Test Accuracy: 23.009, learning rate: 9.1552734375e-07
+>>> Epoch 268 Test Avg Loss: 3.200, Test Accuracy: 23.012, learning rate: 9.1552734375e-07
+>>> Epoch 269 Test Avg Loss: 3.201, Test Accuracy: 22.989, learning rate: 9.1552734375e-07
+>>> Epoch 270 Test Avg Loss: 3.200, Test Accuracy: 23.019, learning rate: 9.1552734375e-07
+>>> Epoch 271 Test Avg Loss: 3.200, Test Accuracy: 23.076, learning rate: 9.1552734375e-07
+Epoch   271: reducing learning rate of group 0 to 4.5776e-07.
+>>> Epoch 272 Test Avg Loss: 3.201, Test Accuracy: 22.960, learning rate: 4.57763671875e-07
+>>> Epoch 273 Test Avg Loss: 3.200, Test Accuracy: 23.038, learning rate: 4.57763671875e-07
+>>> Epoch 274 Test Avg Loss: 3.199, Test Accuracy: 22.960, learning rate: 4.57763671875e-07
+>>> Epoch 275 Test Avg Loss: 3.199, Test Accuracy: 22.974, learning rate: 4.57763671875e-07
+>>> Epoch 276 Test Avg Loss: 3.200, Test Accuracy: 22.989, learning rate: 4.57763671875e-07
+>>> Epoch 277 Test Avg Loss: 3.199, Test Accuracy: 23.042, learning rate: 4.57763671875e-07
+>>> Epoch 278 Test Avg Loss: 3.198, Test Accuracy: 23.028, learning rate: 4.57763671875e-07
+>>> Epoch 279 Test Avg Loss: 3.199, Test Accuracy: 22.999, learning rate: 4.57763671875e-07
+>>> Epoch 280 Test Avg Loss: 3.199, Test Accuracy: 22.983, learning rate: 4.57763671875e-07
+>>> Epoch 281 Test Avg Loss: 3.201, Test Accuracy: 22.967, learning rate: 4.57763671875e-07
+>>> Epoch 282 Test Avg Loss: 3.201, Test Accuracy: 22.956, learning rate: 4.57763671875e-07
+>>> Epoch 283 Test Avg Loss: 3.200, Test Accuracy: 23.022, learning rate: 4.57763671875e-07
+>>> Epoch 284 Test Avg Loss: 3.200, Test Accuracy: 23.009, learning rate: 4.57763671875e-07
+>>> Epoch 285 Test Avg Loss: 3.200, Test Accuracy: 23.006, learning rate: 4.57763671875e-07
+>>> Epoch 286 Test Avg Loss: 3.200, Test Accuracy: 22.970, learning rate: 4.57763671875e-07
+Epoch   286: reducing learning rate of group 0 to 2.2888e-07.
+>>> Epoch 287 Test Avg Loss: 3.200, Test Accuracy: 22.999, learning rate: 2.288818359375e-07
+>>> Epoch 288 Test Avg Loss: 3.201, Test Accuracy: 22.989, learning rate: 2.288818359375e-07
+>>> Epoch 289 Test Avg Loss: 3.201, Test Accuracy: 22.940, learning rate: 2.288818359375e-07
+>>> Epoch 290 Test Avg Loss: 3.200, Test Accuracy: 23.093, learning rate: 2.288818359375e-07
+>>> Epoch 291 Test Avg Loss: 3.200, Test Accuracy: 23.035, learning rate: 2.288818359375e-07
+>>> Epoch 292 Test Avg Loss: 3.200, Test Accuracy: 22.989, learning rate: 2.288818359375e-07
+>>> Epoch 293 Test Avg Loss: 3.199, Test Accuracy: 23.019, learning rate: 2.288818359375e-07
+>>> Epoch 294 Test Avg Loss: 3.199, Test Accuracy: 23.025, learning rate: 2.288818359375e-07
+>>> Epoch 295 Test Avg Loss: 3.200, Test Accuracy: 22.980, learning rate: 2.288818359375e-07
+>>> Epoch 296 Test Avg Loss: 3.201, Test Accuracy: 22.915, learning rate: 2.288818359375e-07
+>>> Epoch 297 Test Avg Loss: 3.201, Test Accuracy: 22.970, learning rate: 2.288818359375e-07
+>>> Epoch 298 Test Avg Loss: 3.202, Test Accuracy: 22.964, learning rate: 2.288818359375e-07
+>>> Epoch 299 Test Avg Loss: 3.202, Test Accuracy: 22.971, learning rate: 2.288818359375e-07
+>>> Epoch 300 Test Avg Loss: 3.201, Test Accuracy: 22.993, learning rate: 2.288818359375e-07
+Done ##############################################

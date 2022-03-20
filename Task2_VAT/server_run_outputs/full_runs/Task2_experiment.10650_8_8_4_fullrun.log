@@ -1,0 +1,108 @@
+000 (10650.000.000) 2022-03-02 00:50:52 Job submitted from host: <134.96.227.100:9618?addrs=134.96.227.100-9618&alias=conduit.cs.uni-saarland.de&noUDP&sock=schedd_1232_a0c4>
+...
+040 (10650.000.000) 2022-03-02 00:50:57 Started transferring input files
+	Transferring to host: <134.96.224.199:9618?addrs=134.96.224.199-9618&alias=tenos.cs.uni-saarland.de&noUDP&sock=teaching1_3130_1e38_1648210>
+...
+040 (10650.000.000) 2022-03-02 00:50:57 Finished transferring input files
+...
+001 (10650.000.000) 2022-03-02 00:50:57 Job executing on host: <134.96.224.199:9618?addrs=134.96.224.199-9618&alias=tenos.cs.uni-saarland.de&noUDP&sock=startd_1941_f16a>
+...
+006 (10650.000.000) 2022-03-02 00:51:05 Image size of job updated: 95
+	95  -  MemoryUsage of job (MB)
+	98028  -  ResidentSetSize of job (KB)
+...
+006 (10650.000.000) 2022-03-02 00:56:05 Image size of job updated: 5713
+	5713  -  MemoryUsage of job (MB)
+	5850584  -  ResidentSetSize of job (KB)
+...
+006 (10650.000.000) 2022-03-02 01:01:06 Image size of job updated: 6710
+	6710  -  MemoryUsage of job (MB)
+	6871336  -  ResidentSetSize of job (KB)
+...
+006 (10650.000.000) 2022-03-02 01:06:06 Image size of job updated: 6718
+	6718  -  MemoryUsage of job (MB)
+	6880220  -  ResidentSetSize of job (KB)
+...
+006 (10650.000.000) 2022-03-02 01:31:07 Image size of job updated: 6829
+	6829  -  MemoryUsage of job (MB)
+	6993676  -  ResidentSetSize of job (KB)
+...
+006 (10650.000.000) 2022-03-02 02:31:14 Image size of job updated: 6846
+	6846  -  MemoryUsage of job (MB)
+	7011036  -  ResidentSetSize of job (KB)
+...
+006 (10650.000.000) 2022-03-02 04:11:24 Image size of job updated: 6850
+	6850  -  MemoryUsage of job (MB)
+	7014580  -  ResidentSetSize of job (KB)
+...
+006 (10650.000.000) 2022-03-02 05:51:35 Image size of job updated: 6937
+	6937  -  MemoryUsage of job (MB)
+	7104316  -  ResidentSetSize of job (KB)
+...
+040 (10650.000.000) 2022-03-04 00:00:32 Entered queue to transfer input files
+	Transferring to host: <134.96.224.199:9618?addrs=134.96.224.199-9618&alias=tenos.cs.uni-saarland.de&noUDP&sock=teaching3_3130_1e38_1680618>
+...
+040 (10650.000.000) 2022-03-04 00:01:33 Started transferring input files
+	Seconds spent in queue: 61
+...
+001 (10650.000.000) 2022-03-04 00:01:33 Job executing on host: <134.96.224.199:9618?addrs=134.96.224.199-9618&alias=tenos.cs.uni-saarland.de&noUDP&sock=startd_1941_f16a>
+...
+040 (10650.000.000) 2022-03-04 00:01:33 Finished transferring input files
+...
+022 (10650.000.000) 2022-03-04 08:16:57 Job disconnected, attempting to reconnect
+    Local schedd and job shadow died, schedd now running again
+    Trying to reconnect to teaching3@tenos.cs.uni-saarland.de <134.96.224.199:9618?addrs=134.96.224.199-9618&alias=tenos.cs.uni-saarland.de&noUDP&sock=startd_1941_f16a>
+...
+023 (10650.000.000) 2022-03-04 08:16:58 Job reconnected to teaching3@tenos.cs.uni-saarland.de
+    startd address: <134.96.224.199:9618?addrs=134.96.224.199-9618&alias=tenos.cs.uni-saarland.de&noUDP&sock=startd_1941_f16a>
+    starter address: <134.96.224.199:9618?addrs=134.96.224.199-9618&alias=tenos.cs.uni-saarland.de&noUDP&sock=teaching3_3130_1e38_1680618>
+...
+022 (10650.000.000) 2022-03-04 08:24:06 Job disconnected, attempting to reconnect
+    Local schedd and job shadow died, schedd now running again
+    Trying to reconnect to teaching3@tenos.cs.uni-saarland.de <134.96.224.199:9618?addrs=134.96.224.199-9618&alias=tenos.cs.uni-saarland.de&noUDP&sock=startd_1941_f16a>
+...
+023 (10650.000.000) 2022-03-04 08:24:08 Job reconnected to teaching3@tenos.cs.uni-saarland.de
+    startd address: <134.96.224.199:9618?addrs=134.96.224.199-9618&alias=tenos.cs.uni-saarland.de&noUDP&sock=startd_1941_f16a>
+    starter address: <134.96.224.199:9618?addrs=134.96.224.199-9618&alias=tenos.cs.uni-saarland.de&noUDP&sock=teaching3_3130_1e38_1680618>
+...
+022 (10650.000.000) 2022-03-04 08:27:11 Job disconnected, attempting to reconnect
+    Local schedd and job shadow died, schedd now running again
+    Trying to reconnect to teaching3@tenos.cs.uni-saarland.de <134.96.224.199:9618?addrs=134.96.224.199-9618&alias=tenos.cs.uni-saarland.de&noUDP&sock=startd_1941_f16a>
+...
+023 (10650.000.000) 2022-03-04 08:27:14 Job reconnected to teaching3@tenos.cs.uni-saarland.de
+    startd address: <134.96.224.199:9618?addrs=134.96.224.199-9618&alias=tenos.cs.uni-saarland.de&noUDP&sock=startd_1941_f16a>
+    starter address: <134.96.224.199:9618?addrs=134.96.224.199-9618&alias=tenos.cs.uni-saarland.de&noUDP&sock=teaching3_3130_1e38_1680618>
+...
+006 (10650.000.000) 2022-03-07 03:49:33 Image size of job updated: 7500
+	6952  -  MemoryUsage of job (MB)
+	7500000  -  ResidentSetSize of job (KB)
+...
+006 (10650.000.000) 2022-03-07 03:59:34 Image size of job updated: 7500
+	7102  -  MemoryUsage of job (MB)
+	7500000  -  ResidentSetSize of job (KB)
+...
+006 (10650.000.000) 2022-03-07 04:29:37 Image size of job updated: 7500
+	7127  -  MemoryUsage of job (MB)
+	7500000  -  ResidentSetSize of job (KB)
+...
+006 (10650.000.000) 2022-03-07 04:54:38 Image size of job updated: 7500
+	7146  -  MemoryUsage of job (MB)
+	7500000  -  ResidentSetSize of job (KB)
+...
+005 (10650.000.000) 2022-03-07 07:05:51 Job terminated.
+	(1) Normal termination (return value 1)
+		Usr 18 01:58:27, Sys 6 07:26:37  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 31 10:42:53, Sys 10 07:01:20  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	87216144  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	87216144  -  Total Bytes Sent By Job
+	65334  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage   Request Allocated 
+	   Cpus                 :      0.00         1         7 
+	   Disk (KB)            : 873322    268435456 441185228 
+	   Memory (MB)          :   7146        65536     96741 
+
+	Job terminated of its own accord at 2022-03-07T06:05:49Z with exit-code 1.
+...

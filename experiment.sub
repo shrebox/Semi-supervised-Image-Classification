@@ -1,0 +1,17 @@
+universe 		= docker
+docker_image        = dankazbek/nnti-2122-project
+transfer_input_files = Task2_VAT
+transfer_output_files = runs.tar.gz, saved_models.tar.gz
+executable              = start.sh
+output                  = Task2_VAT.$(ClusterId).$(ProcId).out
+error                   = Task2_VAT.$(ClusterId).$(ProcId).err
+log                     = Task2_VAT.$(ClusterId).log
+should_transfer_files   = YES
+when_to_transfer_output = ON_EXIT
+request_GPUs = 1
+request_CPUs = 1
+request_disk = 256G
+request_memory = 64G
+requirements = UidDomain == "cs.uni-saarland.de" 
++WantGPUHomeMounted = true
+queue 1
